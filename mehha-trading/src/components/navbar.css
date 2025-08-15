@@ -1,0 +1,41 @@
+.navbar {
+  background-color: var(--light);
+  color: var(--dark);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: .8;
+
+  border-bottom: #A5FF3E 2px solid;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  filter: drop-shadow(0 0 5px #A5FF3E)
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--alternate);
+  transition: color 0.3s ease;
+  padding: 1rem 0;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
