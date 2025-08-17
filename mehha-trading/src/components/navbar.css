@@ -21,21 +21,78 @@
 
 .logo {
   height: 50px;
-  filter: drop-shadow(0 0 5px #A5FF3E)
+  filter: drop-shadow(0 0 5px #A5FF3E);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
+  margin: 0;
 }
 
 .nav-links a {
   color: var(--alternate);
   transition: color 0.3s ease;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
 }
 
 .nav-links a:hover {
   color: var(--primary);
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative; /* so the submenu stays under it */
+  padding: 1.2rem 0;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+  color: var(--primary);
+}
+
+.dropbtn {
+  color: var(--alternate);
+  display: block;
+  transition: color 0.3s ease;
+  /* padding: 1.2rem 0; */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;   /* dropdown appears below Trades */
+  left: -20%;
+  background-color: var(--light);
+  min-width: 90px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 0;
+}
+
+.dropdown-content li {
+  width: 100%;
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--alternate);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
 }
