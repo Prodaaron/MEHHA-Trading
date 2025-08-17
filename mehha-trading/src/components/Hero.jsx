@@ -13,7 +13,9 @@ const Hero = () => {
         <img src={logo} alt="MEHHA Trading PLC" className="hero-logo" />
         <h1>Exploring New Opportunities.</h1>
         <p>Diving into international trade in new ways.</p>
-        <button className="hero-btn">Learn More</button>
+        <a href="/exports">
+          <button className="hero-btn">Learn More</button>
+        </a>
       </div>
     </section>
   );

@@ -12,13 +12,24 @@ export default function Navbar() {
         </a>
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
           
           {/* Dropdown */}
           <li className="dropdown">
-            <span className="dropbtn">Trades ▾</span>
+            <span className="dropbtn">Companies & Shares ▾</span>
+            <ul className="dropdown-content">
+              <li><Link to="/industries">Industries</Link></li>
+              <hr />
+              <li><Link to="/f&b">Food & Beverages</Link></li>
+              <hr />
+              <li><Link to="/education&services">Education Services</Link></li>
+            </ul>
+          </li>
+
+          <li className="dropdown">
+            <span className="dropbtn">International Trades ▾</span>
             <ul className="dropdown-content">
               <li><Link to="/exports">Exports</Link></li>
+              <hr />
               <li><Link to="/imports">Imports</Link></li>
             </ul>
           </li>

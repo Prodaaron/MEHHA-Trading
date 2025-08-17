@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
+// Firebase App (the core Firebase SDK) is always required
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore"; // <- ADD THIS
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,6 +18,10 @@ const firebaseConfig = {
   measurementId: "G-J7PKEJHWFZ"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+
 const analytics = getAnalytics(app);
+
+// Initialize Firestore
+export const db = getFirestore(app);

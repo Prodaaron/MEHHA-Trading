@@ -1,0 +1,77 @@
+.footer {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 2rem 1rem 1rem 1rem;
+  font-family: sans-serif;
+}
+
+.footer a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-newsletter {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.footer-newsletter input[type="email"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background-color: var(--secondary);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}

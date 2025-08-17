@@ -7,6 +7,7 @@
   left: 0;
   right: 0;
   opacity: .8;
+  z-index: 2000;
 
   border-bottom: #A5FF3E 2px solid;
 }
@@ -64,7 +65,8 @@
   display: none;
   position: absolute;
   top: 100%;   /* dropdown appears below Trades */
-  left: -20%;
+  left: 0%;
+  right: 0%;
   background-color: var(--light);
   min-width: 90px;
   border: 1px solid var(--primary);
@@ -80,7 +82,9 @@
 }
 
 .dropdown-content a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 10px 15px;
   color: var(--alternate);
   text-decoration: none;
@@ -95,4 +99,12 @@
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: flex;
+}
+
+hr {
+  /* border: .5px solid var(--primary); */
+  margin: 0;
+  /* border-color: var(--primary); */
+  width: 80%;
+  align-self: center;
 }
