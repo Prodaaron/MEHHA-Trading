@@ -49,6 +49,7 @@
 .footer-newsletter form {
   display: flex;
   flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .footer-newsletter input[type="email"],
@@ -129,5 +130,28 @@
   }
   40% {
     transform: translateX(-50%) translateY(0) scaleY(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-links ul {
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--primary);
+    padding: 10px 0;
+  }
+
+  .footer-links ul li {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--primary);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer-newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
