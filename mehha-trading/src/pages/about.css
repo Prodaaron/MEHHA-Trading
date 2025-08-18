@@ -43,3 +43,17 @@
   transform: scale(1.05);
   filter: brightness(1.05);
 }
+
+@media screen and (max-width: 768px) {
+  .a-sections {
+    width: 90%;
+  }
+  
+  .a-info div {
+    width: 100%;
+  }
+  
+  .a-info img {
+    display: none;
+  }
+}
