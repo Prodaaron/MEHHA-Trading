@@ -12,7 +12,7 @@ export const companies = [
         //          mm-dd-yy
         id: 'comp-2-08-17-25',
         name: 'Tirsit Apartment',
-        logo: '../../public/LOGO.png',
+        logo: '../../public/Tirsit.png',
         category: 'Real estate',
         description: 'Lorem ipsum hsui siujg sjguygy 2024 suigu sajgu suibsygsiyu usgiy usgy78s ugigs uysguy  wyugvbd iuwgb iugsga igeb iugauig.'
     },

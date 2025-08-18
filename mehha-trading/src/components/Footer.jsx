@@ -33,11 +33,15 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Services</a></li>
+            <li><a href="/exports">Exports</a></li>
+            <li><a href="/industries">Industries</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/about">About us</a></li>
           </ul>
+          <div>
+            <h4>Contact Us</h4>
+            <a href="mailto:mehha.trading@gmail.com">Mehha.trading@gmail.com</a>
+          </div>
         </div>
         <div className="footer-newsletter">
           <h4>Subscribe to our Newsletter</h4>
