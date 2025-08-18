@@ -43,6 +43,7 @@ const Footer = () => {
             <a href="mailto:mehha.trading@gmail.com">Mehha.trading@gmail.com</a>
           </div>
         </div>
+
         <div className="footer-newsletter">
           <h4>Subscribe to our Newsletter</h4>
           <form onSubmit={handleSubmit}>
@@ -74,8 +75,22 @@ const Footer = () => {
           </form>
         </div>
       </div>
+
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} MEHHA Trading PLC. All rights reserved.</p>
+      </div>
+
+      {/* Wave Animation */}
+      <div className="wave-container">
+        <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,40 C300,140 900,-40 1200,60 L1200,120 L0,120 Z"></path>
+        </svg>
+        <svg className="wave second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,-20 900,180 1200,40 L1200,120 L0,120 Z"></path>
+        </svg>
+        <svg className="wave third" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,30 C300,110 900,-50 1200,70 L1200,120 L0,120 Z"></path>
+        </svg>
       </div>
     </footer>
   );
