@@ -5,7 +5,7 @@ import "./list.css";
 const List = () => {
   return (
    <div className="company-section">
-        <h1>Our Companies</h1>
+        <h1>Our Companies & Shares</h1>
         <hr />
         <div className="company-list">
             {companies.map((company) => (
