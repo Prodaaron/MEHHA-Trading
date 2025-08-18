@@ -112,3 +112,13 @@
 }
 
 .uc-footer a { color: var(--secondary); text-decoration: underline; }
+
+@media screen and (max-width: 768px) {
+  .uc-wrapper {
+    width: 84%;
+  }
+  
+  .uc-card {
+    max-width: 300px;
+  }
+}
