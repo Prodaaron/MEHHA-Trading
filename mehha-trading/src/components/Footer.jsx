@@ -40,7 +40,7 @@ const Footer = () => {
           </ul>
           <div>
             <h4>Contact Us</h4>
-            <a href="mailto:mehha.trading@gmail.com">Mehha.trading@gmail.com</a>
+            <a href="mailto:mehha.trading@gmail.com">mehha.trading@gmail.com</a>
           </div>
         </div>
 

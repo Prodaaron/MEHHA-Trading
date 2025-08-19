@@ -31,7 +31,6 @@ const MissionSection = () => {
             <img src={dev} alt="" />
             <p>promote sustainable growth, and contribute to Ethiopia's economic development</p>
           </div>
-          
         </div>
 
         <div className="msec-image-container">
