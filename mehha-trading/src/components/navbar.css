@@ -79,6 +79,7 @@
 .dropdown-content li {
   width: 100%;
   list-style: none;
+  border-bottom: 1px solid #A5FF3E;
 }
 
 .dropdown-content a {

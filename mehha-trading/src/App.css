@@ -24,3 +24,14 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
 }
+
+hr {
+  margin-top: 0;
+  margin-bottom: 10px;
+  width: 60px !important;
+  border-color: var(--primary);
+  border-style: solid;
+  height: 2px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}

@@ -1,0 +1,37 @@
+.shuffle-slider {
+  position: relative;
+  width: 450px;   /* adjust as per portrait image size */
+  height: 450px;
+  margin: auto;
+  /* overflow: hidden; */
+}
+
+.shuffle-slider .shuffle-image {
+  position: absolute;
+  width: 300px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.shuffle-slider .position-0 {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  z-index: 3;
+}
+
+.shuffle-slider .position-1 {
+  opacity: 0.6;
+  transform: translateX(-70%) rotate(-5deg) scale(0.9);
+  z-index: 2;
+}
+
+.shuffle-slider .position-2 {
+  opacity: 0.6;
+  transform: translateX(-30%) rotate(5deg) scale(0.9);
+  z-index: 2;
+}

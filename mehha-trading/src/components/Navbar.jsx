@@ -42,9 +42,7 @@ export default function Navbar() {
             </span>
             <ul className="dropdown-content">
               <li><Link to="/industries">Industries</Link></li>
-              <hr />
               <li><Link to="/f&b">Food & Beverages</Link></li>
-              <hr />
               <li><Link to="/education&services">Education Services</Link></li>
             </ul>
           </li>
@@ -56,7 +54,6 @@ export default function Navbar() {
             </span>
             <ul className="dropdown-content">
               <li><Link to="/exports">Exports</Link></li>
-              <hr />
               <li><Link to="/imports">Imports</Link></li>
             </ul>
           </li>
