@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { db } from "../services/firebase.js";
 import { collection, addDoc } from "firebase/firestore";
 import "./footer.css";
+import emailIcon from '../assets/email-svgrepo-com.svg';
+import instaIcon from '../assets/instagram-svgrepo-com.svg';
+import tiktokIcon from '../assets/tiktok-svgrepo-com.svg';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -40,7 +43,15 @@ const Footer = () => {
           </ul>
           <div>
             <h4>Contact Us</h4>
-            <a href="mailto:mehha.trading@gmail.com">mehha.trading@gmail.com</a>
+            <a className="email" href="mailto:mehha.trading@gmail.com"> <img className='social-icons' src={emailIcon} alt="" />mehha.trading@gmail.com</a>
+            {/* <div className="social-links">
+              <a href="">
+                <img className='social-icons' src={instaIcon} alt="" />
+              </a>
+              <a href="">
+                <img className='social-icons' src={tiktokIcon} alt="" />
+              </a>
+            </div> */}
           </div>
         </div>
 

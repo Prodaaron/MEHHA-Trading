@@ -41,6 +41,32 @@
   margin-bottom: 0.5rem;
 }
 
+.email {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.social-links {
+  display: flex;
+  gap: 6px;
+  width: fit-content;
+}
+
+.social-icons {
+  width: 25px;
+  transition: all .15s;
+}
+
+.social-links:hover .social-icons:not(:hover) {
+  filter: grayscale(100%);
+}
+
+.social-icons:hover {
+  width: 30px;
+}
+
 .footer-newsletter {
   flex: 1;
   min-width: 250px;
