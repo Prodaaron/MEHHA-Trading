@@ -48,6 +48,7 @@ const Footer = () => {
           <h4>Subscribe to our Newsletter</h4>
           <form onSubmit={handleSubmit}>
             <input
+            className="firstname"
               type="text"
               name="firstName"
               placeholder="First Name"
@@ -56,6 +57,7 @@ const Footer = () => {
               required
             />
             <input
+            className="lastname"
               type="text"
               name="lastName"
               placeholder="Last Name"
