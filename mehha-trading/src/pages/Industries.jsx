@@ -2,6 +2,7 @@ import React from 'react';
 import UnderConstruction from '../components/UnderConstruction';
 import ShuffleSlider from "../components/ShuffleSlider";
 import TreadmillSlider from "../components/TreadmillSlider";
+import './Industries.css'
 
 const images = [
   "./rawslide.jpg", "./rawslide (1).jpg", "./rawslide (2).jpg", "./rawslide (3).jpg",
@@ -10,7 +11,7 @@ const images = [
 
 const Industries = () => {
   return (
-    <div>
+    <div className='industries'>
       {/* <UnderConstruction /> */}
 
       <h2>Mes-Arg Plastic Shoe and Raw Material</h2>
