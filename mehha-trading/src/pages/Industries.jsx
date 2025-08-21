@@ -12,13 +12,13 @@ const images = [
 const Industries = () => {
   return (
     <div className='industries'>
-      {/* <UnderConstruction /> */}
+      <UnderConstruction />
 
-      <h2>Mes-Arg Plastic Shoe and Raw Material</h2>
+      {/* <h2>Mes-Arg Plastic Shoe and Raw Material</h2>
       <hr />
       <div className='slider-container'>
         <TreadmillSlider images={images} />
-      </div>
+      </div> */}
        
     </div>
   )
