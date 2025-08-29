@@ -7,7 +7,7 @@ export default function UnderConstruction({
   title = "We're building this page",
   subtitle = "This page is under construction. Please check back soon.",
   contact = "Contact support",
-  contactHref = "mailto:hello@example.com",
+  contactHref = "mailto:mehha.trading@gmail.com",
   showBack = true,
   backText = "Back to home",
   onBack = null,

@@ -46,11 +46,16 @@
   align-items: center;
   gap: 5px;
   margin-bottom: 12px;
+  width: fit-content;
+}
+
+.email-icon {
+  width: 20px !important;
 }
 
 .social-links {
   display: flex;
-  gap: 6px;
+  gap: 18px;
   width: fit-content;
 }
 
@@ -195,9 +200,28 @@
     margin: 0;
   }
 
+  .footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+  }
+
   .footer-newsletter form {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
+    width: 90%;
+  }
+
+  .footer-newsletter form button {
+    width: 100%;
+  }
+
+  .firstname {
+    margin-right: 0;
   }
 }
