@@ -6,6 +6,7 @@ import './Industries.css';
 import MesStatsSection from '../components/MesStatsSection';
 import PvcSection from '../components/pvcSection';
 import Meshero from '../components/meshero';
+import PvcRawSection from '../components/pvcRawSection';
 
 const images = [
   "./rawslide.jpg", "./rawslide (1).jpg", "./rawslide (2).jpg", "./rawslide (3).jpg",
@@ -23,6 +24,7 @@ const Industries = () => {
       <div className='slider-container'>
         <TreadmillSlider images={images} />
       </div>
+      <PvcRawSection />
     </div>
   )
 }
