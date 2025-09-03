@@ -2,7 +2,8 @@ import React from 'react';
 import UnderConstruction from '../components/UnderConstruction';
 import ShuffleSlider from "../components/ShuffleSlider";
 import TreadmillSlider from "../components/TreadmillSlider";
-import './Industries.css'
+import './Industries.css';
+import MesStatsSection from '../components/MesStatsSection';
 
 const images = [
   "./rawslide.jpg", "./rawslide (1).jpg", "./rawslide (2).jpg", "./rawslide (3).jpg",
@@ -12,14 +13,15 @@ const images = [
 const Industries = () => {
   return (
     <div className='industries'>
-      <UnderConstruction />
+      {/* <UnderConstruction /> */}
 
-      {/* <h2>Mes-Arg Plastic Shoe and Raw Material</h2>
+      <h2>Mes-Arg Plastic Shoe and Raw Material Factory</h2>
       <hr />
       <div className='slider-container'>
         <TreadmillSlider images={images} />
-      </div> */}
+      </div>
        
+      <MesStatsSection />
     </div>
   )
 }
