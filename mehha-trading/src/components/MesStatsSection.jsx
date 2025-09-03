@@ -5,8 +5,8 @@ import { useInView } from "react-intersection-observer";
 import './messtat.css';
 
 const statsData = [
-  { id: 1, value: 17, suffix: "+", label: "Years in Business", color: "var(--secondary)" },
-  { id: 4, value: 20, suffix: "+", label: "Containers Imported", color: "var(--secondary)" }
+  { id: 1, value: 15, suffix: "+", label: "Years in Business", color: "var(--secondary)" },
+  { id: 4, value: 22, suffix: "+", label: "Containers Imported", color: "var(--secondary)" }
 ];
 
 export default function MesStatsSection() {

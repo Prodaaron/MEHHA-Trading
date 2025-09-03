@@ -4,6 +4,8 @@ import ShuffleSlider from "../components/ShuffleSlider";
 import TreadmillSlider from "../components/TreadmillSlider";
 import './Industries.css';
 import MesStatsSection from '../components/MesStatsSection';
+import PvcSection from '../components/pvcSection';
+import Meshero from '../components/meshero';
 
 const images = [
   "./rawslide.jpg", "./rawslide (1).jpg", "./rawslide (2).jpg", "./rawslide (3).jpg",
@@ -14,16 +16,15 @@ const Industries = () => {
   return (
     <div className='industries'>
       {/* <UnderConstruction /> */}
-
-      <h2>Mes-Arg Plastic Shoe and Raw Material Factory</h2>
-      <hr />
+      
+      <Meshero /> 
+      <MesStatsSection />
+      <PvcSection />
       <div className='slider-container'>
         <TreadmillSlider images={images} />
       </div>
-       
-      <MesStatsSection />
     </div>
   )
 }
 
-export default Industries
+export default Industries;
