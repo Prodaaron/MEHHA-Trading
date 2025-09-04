@@ -1,1 +1,5 @@
-
+.shuffle-container {
+    display: flex;
+    background: var(--dark);
+    justify-content: start;
+}

@@ -1,0 +1,39 @@
+.shuffle-container {
+    display: flex;
+    background: var(--dark);
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* .shuffle-content {
+    
+} */
+
+.sc-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: solid;
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+.sc-btn:hover {
+    background: none;
+}
+
+@media screen and (max-width: 768px) {
+    .shuffle-container {
+        flex-direction: column;
+    }
+
+    .shuffle-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
