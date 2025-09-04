@@ -1,7 +1,7 @@
 .pvc-section {
-   display: flex;
-   align-items: center;
-   height: 500px;
+  display: flex;
+  align-items: center;
+  height: 500px;
 }
 
 .content-card {
@@ -20,4 +20,17 @@
 
 .content-card p {
     font-size: 1.16rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pvc-section {
+    justify-content: center;
+    height: fit-content;
+    padding: 1rem 0rem;
+  }
+
+  .content-card {
+    width: 70%;
+    border-radius: 10px !important;
+  }
 }
