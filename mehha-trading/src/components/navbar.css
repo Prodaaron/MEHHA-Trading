@@ -1,12 +1,19 @@
 .navbar {
-  background-color: var(--light);
-  color: var(--dark);
+  background: linear-gradient(
+    135deg,
+    #0e110d 0%,
+    #111111 25%,
+    #181b18 50%,
+    #1d1d1d 75%,
+    #000000 100%
+  );
+  color: var(--light) !important;
 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  opacity: .8;
+  opacity: .95;
   z-index: 2000;
 
   border-bottom: #A5FF3E 2px solid;
@@ -34,7 +41,7 @@
 }
 
 .nav-links a {
-  color: var(--alternate);
+  color: var(--light);
   transition: color 0.3s ease;
   padding: 1.2rem 0;
 }
@@ -55,7 +62,7 @@
 }
 
 .dropbtn {
-  color: var(--alternate);
+  color: var(--light);
   display: block;
   transition: color 0.3s ease;
   /* padding: 1.2rem 0; */
@@ -67,7 +74,14 @@
   top: 100%;   /* dropdown appears below Trades */
   left: 0%;
   right: 0%;
-  background-color: var(--light);
+  background: linear-gradient(
+    135deg,
+    #0e110d 0%,
+    #111111 25%,
+    #181b18 50%,
+    #1d1d1d 75%,
+    #000000 100%
+  );
   min-width: 90px;
   border: 1px solid var(--primary);
   border-radius: 5px;
@@ -79,7 +93,7 @@
 .dropdown-content li {
   width: 100%;
   list-style: none;
-  border-bottom: 1px solid #A5FF3E;
+  border-top: 1px solid #A5FF3E;
 }
 
 .dropdown-content a {
@@ -87,7 +101,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10px 15px;
-  color: var(--alternate);
+  color: var(--light);
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -152,10 +166,18 @@ hr {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--light);
+    background: linear-gradient(
+      135deg,
+      #0e110d 0%,
+      #111111 25%,
+      #181b18 50%,
+      #1d1d1d 75%,
+      #000000 100%
+    );
     width: 100%;
     flex-direction: column;
     align-items: center;
+    gap: 0;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease;
@@ -164,12 +186,16 @@ hr {
 
   .nav-links.open {
     max-height: 600px; /* enough to show all links */
-    padding: 30px 0;
+    /* padding: 30px 0; */
   }
 
   .nav-links li {
     width: 100%;
     text-align: center;
+  }
+
+  .dropdown {
+    padding: 0;
   }
 
   .dropdown-content {
@@ -178,18 +204,20 @@ hr {
     border: none;
     box-shadow: none;
     border-radius: 0;
+    padding: 12px;
   }
 
   .dropdown-content a {
-    padding: 10px 0;
+    padding: 0;
   }
 
   .hamburger {
     display: flex; /* show hamburger on small screens */
   }
 
-  .nav-links a {
+  .nav-links li {
     padding: 15px 0;
+    border-bottom: 1px solid #A5FF3E;
   }
 
   .dropdown:hover .dropdown-content {

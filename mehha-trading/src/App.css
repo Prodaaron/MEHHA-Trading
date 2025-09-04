@@ -5,7 +5,14 @@
   --secondary: #4B4B4B;
   --alternate: #415033;
   --alternate2: #86da00;
-  --dark: #000000;
+  --dark: linear-gradient(
+    135deg,
+    #0e110d 0%,
+    #111111 25%,
+    #181b18 50%,
+    #1d1d1d 75%,
+    #000000 100%
+  );
   --light: #FFFFFF;
   --secondary-font: 'Ibarra Real Nova', serif; 
 }

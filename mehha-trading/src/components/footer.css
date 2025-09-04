@@ -1,10 +1,11 @@
 .footer {
-  background-color: var(--dark);
+  background: var(--dark);
   color: var(--light);
   padding: 2rem 1rem 1rem 1rem;
   font-family: sans-serif;
   position: relative;
   overflow: hidden;
+  border-top: 5px groove #A5FF3E;
 }
 
 .footer a {
