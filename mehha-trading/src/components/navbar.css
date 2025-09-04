@@ -160,6 +160,7 @@ hr {
 @media (max-width: 768px) {
   .navbar {
     opacity: .95;
+    height: 57px;
   }
   
   .nav-links {

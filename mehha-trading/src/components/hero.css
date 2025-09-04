@@ -51,3 +51,9 @@
   background-color: var(--alternate);
   color: var(--light);
 }
+
+@media screen and (max-width: 768px) {
+  .hero-overlay {
+    width: 80%;
+  }
+}
