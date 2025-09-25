@@ -1,18 +1,22 @@
-.hero {
+.exphero {
   height: 80vh;
   background-size: contain;
   background-position: start;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 1rem 5rem;
-  text-align: center;
+.exphero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  text-align: start;
   color: white;
   border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  width: 60%;
 }
 
 .hero-logo {
@@ -20,14 +24,14 @@
   filter: drop-shadow(0 0 10px var(--primary)); /* Neon glow */
 }
 
-.hero h1 {
+.exphero h1 {
   font-family: var(--primary-font);
   font-size: 2.5rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.hero p {
+.exphero p {
   font-family: var(--secondary-font);
   font-size: 1.25rem;
   margin-top: 0;
@@ -53,7 +57,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .hero-overlay {
+  .exphero-overlay {
     width: 80%;
   }
 }

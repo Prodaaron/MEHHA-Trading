@@ -11,6 +11,7 @@ import Industries from "./pages/Industries";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contacts";
 import "./App.css";
+import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
