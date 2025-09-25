@@ -34,18 +34,7 @@ export default function Navbar() {
 
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li><Link to="/">Home</Link></li>
-
-          {/* Dropdown 1 */}
-          <li className={`dropdown ${openDropdown === "companies" ? "open" : ""}`}>
-            <span className="dropbtn" onClick={() => toggleDropdown("companies")}>
-              Companies & Shares ▾
-            </span>
-            <ul className="dropdown-content">
-              <li><Link to="/industries">Industries</Link></li>
-              <li><Link to="/f&b">Food & Beverages</Link></li>
-              <li><Link to="/education&services">Education Services</Link></li>
-            </ul>
-          </li>
+          <li><Link to="/industry">Companies & Shares</Link></li>
 
           {/* Dropdown 2 */}
           <li className={`dropdown ${openDropdown === "trades" ? "open" : ""}`}>
