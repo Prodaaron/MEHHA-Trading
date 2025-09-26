@@ -3,6 +3,7 @@ import "./export.css";
 import { oilseedProducts, pulsesProducts } from '../services/data.js';
 import ExpHero from '../components/exphero.jsx';
 import { useLocation } from "react-router-dom";
+import Goal from '../components/goal.jsx';
 
 
 const Export = () => {
@@ -73,6 +74,7 @@ const Export = () => {
         </section>
       </div>
 
+      <Goal /> 
       
     </div>
   );

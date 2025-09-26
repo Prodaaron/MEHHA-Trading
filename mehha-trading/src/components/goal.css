@@ -1,0 +1,53 @@
+.goal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.goal header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.goal h1, .goal h2 {
+    color: var(--primary);
+}
+
+.goal-subtitle {
+    margin-top: 0;
+    font-size: 1rem;
+    color: var(--light);
+}
+
+.goal-content {
+    width: 91%;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    margin: 20px 0;
+    background-color: var(--alternate);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.gc-bg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+.goal {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+}
+
+.goal.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}

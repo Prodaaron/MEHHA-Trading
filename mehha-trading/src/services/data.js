@@ -37,14 +37,14 @@ export const companies = [
     //     link: ''
     // },
 
-    {
-        id: 'comp-2-09-25-25',
-        name: 'Zega International School',
-        logo: './zega.png',
-        category: 'Education',
-        description: '',
-        link: 'https://zegainternational.school/'
-    }
+    // {
+    //     id: 'comp-2-09-25-25',
+    //     name: 'Zega International School',
+    //     logo: './zega.png',
+    //     category: 'Education',
+    //     description: '',
+    //     link: 'https://zegainternational.school/'
+    // }
 ]
 
 export const oilseedProducts = [
@@ -57,7 +57,7 @@ export const oilseedProducts = [
     {
         id: 2,
         name: "Soybean",
-        description: "Soybeans. One that make you never get it else where.",
+        description: "Soybeans. Ones that make you never get it else where.",
         image: "./soybean.png",
     },
     {
