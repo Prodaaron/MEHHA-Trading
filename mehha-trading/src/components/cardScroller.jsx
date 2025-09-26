@@ -3,7 +3,7 @@ import "./cardScroller.css";
 
 const cards = [
   { id: 1, title: "Become your Trusted Supplier" },
-  { id: 2, title: "Contribute to Ethiopia and World Economy" },
+  { id: 2, title: "Provide One of The Finest Agricultural Products" },
   { id: 3, title: "Become One of the Top Leading Trading Companies" },
   { id: 4, title: "Hold a Firm Grip on Ethiopia's Agricultural Sector" },
   { id: 5, title: "Unite with Multiple Companies" },
