@@ -134,7 +134,7 @@ const About = () => {
           </motion.div>
 
           <motion.img
-            src=""
+            src="./Main.png"
             alt="About MEHHA Trading PLC"
             variants={fadeInUp}
           />
