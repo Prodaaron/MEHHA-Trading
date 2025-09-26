@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './goal.css';
 import goalBg from '../assets/environment-target.png';
+import GoalCards from './cardScroller.jsx';
 
 const Goal = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +37,11 @@ const Goal = () => {
         <p className="goal-subtitle">
           Taking part in making a difference as a group, as a family.
         </p>
+
+        <GoalCards />
       </div>
+
+      
     </div>
   );
 };

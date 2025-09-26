@@ -1,0 +1,117 @@
+.goal-cards-wrapper {
+  height: 420px; /* fixed height for 2 rows */
+  overflow: hidden;
+  position: relative;
+}
+
+.goal-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.goal-card {
+  width: 220px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(80px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* apply top vs bottom animation */
+.top-row .goal-card {
+  animation: fadeInDown 0.8s forwards;
+}
+.bottom-row .goal-card {
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* while animating out */
+.goal-cards.animating.down {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.goal-cards.animating.up {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.dot.active {
+  background: #333;
+}
+
+.scroller-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

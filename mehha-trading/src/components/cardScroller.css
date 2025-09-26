@@ -1,0 +1,64 @@
+.scroller-wrapper {
+  height: 400px;
+  overflow-y: auto; /* scrollable section */
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+
+   /* Mask fade top and bottom */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+.scroller-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 150px;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Slide-in on enter */
+.grid.in-view .card.left {
+  opacity: 1;
+  transform: translateY(30px); /* left cards scroll down */
+}
+
+.grid.in-view .card.right {
+  opacity: 1;
+  transform: translateY(-30px); /* right cards scroll up */
+}
+
+/* spacing for scroll */
+.card + .card {
+  margin-top: 1rem;
+}
+
+.cardTitle {
+  color: var(--alternate) !important;
+}
