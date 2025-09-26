@@ -6,8 +6,7 @@ import './messtat.css';
 
 const statsData = [
   { id: 1, value: 15, suffix: "+", label: "Years in Business", color: "var(--secondary)" },
-  { id: 4, value: 22, suffix: "+", label: "Containers Imported", color: "var(--secondary)" },
-  { id: 2, value: 3250000, prefix: "$", suffix: "+", label: "Company Value (Based on AI Analysis)", color: "var(--secondary)" },
+  { id: 4, value: 22, suffix: "+", label: "Containers Imported", color: "var(--secondary)" }
 ];
 
 export default function MesStatsSection() {
