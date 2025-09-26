@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './goal.css';
 import goalBg from '../assets/environment-target.png';
 import GoalCards from './cardScroller.jsx';
+import FutureGoals from './futureGoals.jsx';
 
 const Goal = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,6 +40,13 @@ const Goal = () => {
         </p>
 
         <GoalCards />
+
+        <h2 className="goal-title">Future Goal</h2>
+        <p className="goal-subtitle">
+          Our future goal moving forward
+        </p>
+
+        <FutureGoals />
       </div>
 
       
