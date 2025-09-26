@@ -53,3 +53,17 @@
     border: 1px solid;
     border-color: var(--primary);
 }
+
+@media screen and (max-width: 768px) {
+    .listing-img {
+       display: none;  
+    }
+    .listing-right {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .listing-left {
+        display: none;
+    }
+}

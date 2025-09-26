@@ -55,5 +55,6 @@
 @media screen and (max-width: 768px) {
   .hero-overlay {
     width: 80%;
+    padding: 1rem;
   }
 }

@@ -36,3 +36,15 @@
   transform: translateX(-30%) rotate(5deg) scale(0.9);
   z-index: 2;
 }
+
+@media screen and (max-width: 768px) {
+  .shuffle-slider  {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+
+  .shuffle-slider .shuffle-image {
+    width: 80%;
+  }
+}
