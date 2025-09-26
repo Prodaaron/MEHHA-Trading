@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./export.css";
-import { exportProducts } from '../services/data.js';
+import { oilseedProducts, pulsesProducts } from '../services/data.js';
 import ExpHero from '../components/exphero.jsx';
 import { useLocation } from "react-router-dom";
 
@@ -47,8 +47,23 @@ const Export = () => {
           <h1>Our Products</h1>
           <p>Here are some in demand products we plan to export in 2025/26.</p>
         </header>
+
+        <h2>Oil Seeds</h2>
+        
         <section className="products-grid">
-          {exportProducts.map((product) => (
+          {oilseedProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <img src={product.image} alt={product.name} />
+              <h2>{product.name}</h2>
+              <p>{product.description}</p>
+            </div>
+          ))}
+        </section>
+
+        <h2>Pulses</h2>
+
+        <section className="products-grid">
+          {pulsesProducts.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.image} alt={product.name} />
               <h2>{product.name}</h2>

@@ -47,7 +47,7 @@ export const companies = [
     }
 ]
 
-export const exportProducts = [
+export const oilseedProducts = [
     {
         id: 1,
         name: "Sesame Seeds",
@@ -65,5 +65,26 @@ export const exportProducts = [
         name: "Niger Seeds",
         description: "Premium Seeds. Premium Oils",
         image: "./niger-seeds.png",
+    }
+]
+
+export const pulsesProducts = [
+    {
+        id: 1,
+        name: "Red Kidney Beans",
+        description: "Carefully Selected Red Kidney Beans.",
+        image: "./red-kidney.png",
+    },
+    {
+        id: 2,
+        name: "Green Mung Beans",
+        description: "In-demand Beans that are Pure Quality.",
+        image: "./Green-mung.png",
+    },
+    {
+        id: 3,
+        name: "White Speckled Kidney Beans",
+        description: "Premium Quality, From a Premium Supplier.",
+        image: "./Light-speckled-kidney-beans.png",
     }
 ]
