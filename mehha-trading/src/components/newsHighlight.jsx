@@ -5,15 +5,14 @@ const newsHighlight = () => {
   return (
     <div className='newsHighlight'>
       <h3>Latest</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A voluptatibus impedit laborum doloribus placeat quaerat, similique, porro itaque aliquam quo error tempore exercitationem distinctio. Sapiente odio repellendus fuga. Qui, aspernatur.</p>
 
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore aperiam dignissimos quas, eius eligendi neque modi, excepturi dolorem, voluptates delectus rem veritatis fugit minima ab cum inventore. Laudantium, odit minima!</p>
+      <h5>MEHHA Trading PLC Prepares New Head Office in Nifas Silk Lafto</h5>
 
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis veritatis dignissimos voluptas pariatur nam, ratione ullam consectetur non accusantium ea sint? Necessitatibus itaque saepe animi sequi ullam doloremque, rem quos.</p>
-    
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, eos, voluptas omnis vero blanditiis necessitatibus expedita dolores quod quam cum, odit accusamus maxime ducimus nisi consequatur ad numquam ullam saepe!
-      </p>
+      <p>Addis Ababa — MEHHA Trading PLC has begun the process of setting up its new head office in Nifas Silk Lafto, Woreda 02, on the 5th floor of Tirsit Apartment.</p>
+
+      <p>Once completed, the office will serve as the central hub for MEHHA Trading PLC’s operations, including MEHHA Import & Export, Mes-Arg Plast, and other affiliated companies. The development marks one of the company’s key steps toward launching its export projects, as it prepares to source and collect products for international markets.</p>
+
+      <p>The upcoming office space is being designed to accommodate a growing team and provide a professional environment for clients, reflecting MEHHA’s commitment to building a strong presence in Ethiopia’s trade and export sector. <a href="">read more...</a></p>
     </div>
   )
 }
