@@ -1,7 +1,7 @@
 .hero {
   height: 80vh;
-  background-size: contain;
-  background-position: start;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
 
 .hero-logo {
   width: 300px;
-  filter: drop-shadow(0 0 10px var(--primary)); /* Neon glow */
+  filter: drop-shadow(0 0 5px var(--light)) !important; /* Neon glow */
 }
 
 .hero h1 {
