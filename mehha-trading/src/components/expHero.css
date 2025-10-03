@@ -1,10 +1,11 @@
 .exphero {
-  height: 80vh;
+  /* height: 80vh; */
   background-size: contain;
   background-position: start;
   display: flex;
   align-items: center;
   justify-content: start;
+  padding: 1.5rem 0;
 }
 
 .exphero-overlay {
@@ -59,7 +60,6 @@
 @media screen and (max-width: 768px) {
   .exphero {
     justify-content: center;
-    
   }
   
   .exphero-overlay {

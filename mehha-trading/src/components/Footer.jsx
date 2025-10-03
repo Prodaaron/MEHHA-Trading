@@ -6,6 +6,7 @@ import emailIcon from '../assets/email-svgrepo-com.svg';
 import instaIcon from '../assets/instagram-svgrepo-com.svg';
 import tiktokIcon from '../assets/tiktok-svgrepo-com.svg';
 import facebook from '../assets/facebook-svgrepo-com.svg';
+import NewsHighlight from "./newsHighlight.jsx";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -33,6 +34,10 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-top">
+        <div className="footer-news">
+            <NewsHighlight />
+        </div>
+
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>

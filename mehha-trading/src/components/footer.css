@@ -25,9 +25,13 @@
   margin-bottom: 1.5rem;
 }
 
+.footer-news {
+  width: 40%;
+}
+
 .footer-links {
-  flex: 1;
-  min-width: 200px;
+  /* flex: 1; */
+  /* min-width: 200px; */
 }
 
 .footer-links ul {
@@ -36,6 +40,7 @@
   margin: 0;
   display: flex;
   gap: 20px;
+  flex-direction: column;
 }
 
 .footer-links li {
@@ -74,14 +79,14 @@
 }
 
 .footer-newsletter {
-  flex: 1;
-  min-width: 250px;
+  /* flex: 1; */
+  /* min-width: 250px; */
+  width: 30%;
 }
 
 .footer-newsletter form {
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
 }
 
 .footer-newsletter input[type="email"],

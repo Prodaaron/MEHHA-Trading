@@ -1,0 +1,8 @@
+.newsHighlight {
+    width: 100%;
+}
+
+.newsHighlight p {
+    font-size: .8rem;
+    color: grey;
+}
