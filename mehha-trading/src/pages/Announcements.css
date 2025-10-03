@@ -1,0 +1,16 @@
+.newsArticle {
+    padding: 1rem;
+    margin:  5rem 2rem 2rem 2rem;
+    border: solid 1px;
+    border-radius: 1rem;
+}
+
+.news-head-section {
+    display: flex;
+    gap: 50px;
+}
+
+.news-head-section img {
+    width:30%;
+    border-radius: 2rem;
+}

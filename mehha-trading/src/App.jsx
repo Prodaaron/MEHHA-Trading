@@ -12,7 +12,8 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contacts";
 import "./App.css";
 import ScrollToTop from "./components/scrollToTop";
-import MesArg from "./pages/mes-arg.jsx"
+import MesArg from "./pages/mes-arg.jsx";
+import Announcements from "./pages/Announcements.jsx";
 
 function App() {
   
@@ -32,6 +33,7 @@ function App() {
         <Route path="/imports" element={<Imports />} />
         <Route path="/education&services" element={<Education />} />
         <Route path="/mes-arg-plast" element={<MesArg />} />
+        <Route path="/News" element={<Announcements />} />
       </Routes>
       <Footer />
     </Router>
