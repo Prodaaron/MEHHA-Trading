@@ -19,12 +19,7 @@
   box-shadow: 0 0 10px var(--primary);
 }
 
-.meshero-content h1 {
-    color: rgb(27, 27, 70);
-    filter: drop-shadow(0 0 5px white);
-    margin: 5rem 0;
-    animation: neonEffect .5s infinite ease-in-out;
-}
+
 
 @keyframes neonEffect {
     0% {
