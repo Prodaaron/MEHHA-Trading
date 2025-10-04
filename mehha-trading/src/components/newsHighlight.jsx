@@ -12,7 +12,7 @@ const newsHighlight = () => {
 
       <p>Once completed, the office will serve as the central hub for MEHHA Trading PLC’s operations, including MEHHA Import & Export, Mes-Arg Plast, and other affiliated companies. The development marks one of the company’s key steps toward launching its export projects, as it prepares to source and collect products for international markets.</p>
 
-      <p>The upcoming office space is being designed to accommodate a growing team and provide a professional environment for clients, reflecting MEHHA’s commitment to building a strong presence in Ethiopia’s trade and export sector. <a href="">read more...</a></p>
+      <p>The upcoming office space is being designed to accommodate a growing team and provide a professional environment for clients, reflecting MEHHA’s commitment to building a strong presence in Ethiopia’s trade and export sector. <a href="/News">read more...</a></p>
     </div>
   )
 }
