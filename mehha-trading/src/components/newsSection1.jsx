@@ -17,18 +17,17 @@ const newsSection1 = () => {
           <h5>A Space for Growth and Collaboration</h5>
 
           <p>The new head office is being designed with functionality and professionalism in mind. Once completed, it will bring together the company’s various divisions under one roof, fostering closer collaboration and improving efficiency across operations.</p>
-
-          <h5>Positioning for Export Success</h5>
-
-          <p>As Ethiopia continues to expand its export sector, MEHHA Trading PLC is positioning itself as a strong and reliable player. By investing in a professional and well-structured office environment, the company aims to build confidence among international buyers and local partners.</p>
-
-          <p>“This office represents our readiness to scale up and engage in global trade,” said a MEHHA representative. “We’re not just building walls; we’re building a foundation for our long-term vision.”</p>
         </div>
         
 
         <img src={OfficeBuild} alt="" />
       </div>
 
+      <h5>Positioning for Export Success</h5>
+
+      <p>As Ethiopia continues to expand its export sector, MEHHA Trading PLC is positioning itself as a strong and reliable player. By investing in a professional and well-structured office environment, the company aims to build confidence among international buyers and local partners.</p>
+
+      <p>“This office represents our readiness to scale up and engage in global trade,” said a MEHHA representative. “We’re not just building walls; we’re building a foundation for our long-term vision.”</p>
       
 
       <h5>Looking Ahead</h5>
