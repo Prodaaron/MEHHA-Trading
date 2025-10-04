@@ -9,7 +9,7 @@
 }
 
 .footer a {
-  color: var(--light);
+  color: grey;
   text-decoration: none;
   transition: color 0.3s;
 }

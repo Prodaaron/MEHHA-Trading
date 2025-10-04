@@ -47,21 +47,6 @@ const Footer = () => {
             <li><a href="/contact">Contact</a></li>
             <li><a href="/about">About us</a></li>
           </ul>
-          <div>
-            <h4>Contact Us</h4>
-            <a className="email" href="mailto:mehha.trading@gmail.com"> <img className='social-icons email-icon' src={emailIcon} alt="" />mehha.trading@gmail.com</a>
-            <div className="social-links">
-              <a href="https://web.facebook.com/mehha.trading/">
-                <img className="social-icons facebook-icon" src={facebook} alt="mehha-facebook-icon" />
-              </a>
-              <a href="https://www.instagram.com/mehha.trading/">
-                <img className='social-icons' src={instaIcon} alt="mehha-instagram-icon" />
-              </a>
-              <a href="https://www.tiktok.com/@mehha.trading">
-                <img className='social-icons' src={tiktokIcon} alt="mehha-tiktok-icon" />
-              </a>
-            </div>
-          </div>
         </div>
 
         <div className="footer-newsletter">
@@ -95,6 +80,22 @@ const Footer = () => {
             />
             <button type="submit">Subscribe</button>
           </form>
+
+          <div>
+            <h4>Contact Us</h4>
+            <a className="email" href="mailto:mehha.trading@gmail.com"> <img className='social-icons email-icon' src={emailIcon} alt="" />mehha.trading@gmail.com</a>
+            <div className="social-links">
+              <a href="https://web.facebook.com/mehha.trading/">
+                <img className="social-icons facebook-icon" src={facebook} alt="mehha-facebook-icon" />
+              </a>
+              <a href="https://www.instagram.com/mehha.trading/">
+                <img className='social-icons' src={instaIcon} alt="mehha-instagram-icon" />
+              </a>
+              <a href="https://www.tiktok.com/@mehha.trading">
+                <img className='social-icons' src={tiktokIcon} alt="mehha-tiktok-icon" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
