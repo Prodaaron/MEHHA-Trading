@@ -1,13 +1,6 @@
 .navbar {
-  background: linear-gradient(
-    135deg,
-    #0e110d 0%,
-    #111111 25%,
-    #181b18 50%,
-    #1d1d1d 75%,
-    #000000 100%
-  );
-  color: var(--light) !important;
+  background-color: #fff;
+  color: var(--dark) !important;
 
   position: fixed;
   top: 0;
@@ -16,7 +9,37 @@
   opacity: .95;
   z-index: 2000;
 
-  border-bottom: #A5FF3E 2px solid;
+  /* border-bottom: #A5FF3E 2px solid; */
+}
+
+.upper-header {
+  background-color: var(--alternate3);
+  display: flex;
+  justify-content: space-between;
+}
+
+.uh-left a, .uh-right a {
+  color: var(--light);
+}
+
+.uh-left {
+  display: flex;
+  padding: 10px 4rem;
+  gap: 20px;
+  font-size: .9rem;
+}
+
+.uh-right a {
+  height: fit-content;
+}
+
+.uh-right {
+  background: var(--dark);
+  border-top-left-radius: 2rem;
+  padding: 0 2rem;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .container {
@@ -41,7 +64,7 @@
 }
 
 .nav-links a {
-  color: var(--light);
+  color: var(--dark);
   transition: color 0.3s ease;
   padding: 1.2rem 0;
 }
@@ -62,7 +85,7 @@
 }
 
 .dropbtn {
-  color: var(--light);
+  color: var(--dark);
   display: block;
   transition: color 0.3s ease;
   /* padding: 1.2rem 0; */
@@ -74,17 +97,12 @@
   top: 100%;   /* dropdown appears below Trades */
   left: 0%;
   right: 0%;
-  background: linear-gradient(
-    135deg,
-    #0e110d 0%,
-    #111111 25%,
-    #181b18 50%,
-    #1d1d1d 75%,
-    #000000 100%
-  );
+  background-color: #fff;
+  color: var(--dark);
   min-width: 90px;
   border: 1px solid var(--primary);
-  border-radius: 5px;
+  border-top: none;
+  /* border-radius: 5px; */
   z-index: 1000;
   flex-direction: column;
   padding: 0;
@@ -93,7 +111,8 @@
 .dropdown-content li {
   width: 100%;
   list-style: none;
-  border-top: 1px solid #A5FF3E;
+  color: var(--dark) !important;
+  /* border-top: 1px solid #A5FF3E; */
 }
 
 .dropdown-content a {
@@ -101,7 +120,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10px 15px;
-  color: var(--light);
+  color: var(--dark);
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -155,6 +174,25 @@ hr {
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* visible */
+.navbar.show {
+  transform: translateY(0);
+}
+
+/* hidden */
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
 
 /* Mobile / tablet view */
 @media (max-width: 768px) {
