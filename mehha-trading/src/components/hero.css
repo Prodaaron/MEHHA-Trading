@@ -5,14 +5,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--bg);
 }
 
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 1rem 5rem;
-  text-align: center;
-  color: white;
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
   border-radius: 10px;
+  width: 50%;
+}
+
+.hero-right {
+  width: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: inherit;
 }
 
 .hero-logo {
@@ -31,8 +41,8 @@
   font-family: var(--secondary-font);
   font-size: 1.25rem;
   margin-top: 0;
-  color: var(--primary);
-  filter: drop-shadow(0 0 10px var(--primary));
+  color: var(--alternate);
+  filter: drop-shadow(0 0 10px var(--alternate));
   margin-bottom: 1.5rem;
 }
 
