@@ -7,6 +7,7 @@ import MissionSection from "../components/MissionSection.jsx";
 import ShuffleSection from "../components/ShuffleSection.jsx";
 import ListingSec from '../components/listing-sec.jsx';
 import TextSlider from "../components/TextSlider";
+import SecondSection from "../components/secondSection.jsx";
 
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
     <div className="home">
       <HeroSection />
       <TextSlider />
-      <ListingSec />
+      <SecondSection />
       <ShuffleSection />
       {/* <List /> */}
       <VisionSection />
