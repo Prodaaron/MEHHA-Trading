@@ -1,0 +1,31 @@
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  background: var(--alternate3); /* change to match your site */
+  padding: 1rem 0;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 18s linear infinite;
+  gap: 50px;
+}
+
+.slider-item {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
