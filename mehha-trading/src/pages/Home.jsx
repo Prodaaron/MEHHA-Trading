@@ -8,6 +8,7 @@ import ShuffleSection from "../components/ShuffleSection.jsx";
 import ListingSec from '../components/listing-sec.jsx';
 import TextSlider from "../components/TextSlider";
 import SecondSection from "../components/secondSection.jsx";
+import WhyChooseMehha from "../components/WhyChooseMehha.jsx";
 
 
 const Home = () => {
@@ -16,7 +17,8 @@ const Home = () => {
       <HeroSection />
       <TextSlider />
       <SecondSection />
-      <ShuffleSection />
+      <WhyChooseMehha />
+      {/* <ShuffleSection /> */}
       {/* <List /> */}
       <VisionSection />
       <MissionSection />
