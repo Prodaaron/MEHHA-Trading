@@ -1,49 +1,86 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// src/components/Navbar.jsx
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../App.css";
 import "./navbar.css";
 import logo from "../assets/logo.png";
-import emailIcon from '../assets/email-svgrepo-com.svg';
 import instaIcon from '../assets/instagram-svgrepo-com.svg';
 import tiktokIcon from '../assets/tiktok-svgrepo-com.svg';
 import facebook from '../assets/facebook-svgrepo-com.svg';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [showNavbar, setShowNavbar] = useState(true); 
+  const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const navRef = useRef(null);
+  const hamburgerRef = useRef(null);
+  const location = useLocation();
 
-  const toggleDropdown = (name) => {
-    setOpenDropdown(openDropdown === name ? null : name);
+  const toggleMenu = (e) => {
+    e?.stopPropagation();
+    setIsOpen(prev => !prev);
+    // close any dropdown when toggling main menu
+    setOpenDropdown(null);
   };
 
-  // 👇 Hide on scroll down, show on scroll up
+  const toggleDropdown = (name, e) => {
+    // stop document outside-click handler from firing
+    e?.stopPropagation();
+    setOpenDropdown(prev => (prev === name ? null : name));
+  };
+
+  // Hide on scroll down, show on scroll up (keeps hamburger visible)
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        // scrolling down → hide navbar
-        setShowNavbar(false);
-      } else {
-        // scrolling up → show navbar
-        setShowNavbar(true);
-      }
+      if (window.scrollY > lastScrollY) setShowNavbar(false);
+      else setShowNavbar(true);
       setLastScrollY(window.scrollY);
     };
-
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // Close when route changes
+  useEffect(() => {
+    setIsOpen(false);
+    setOpenDropdown(null);
+  }, [location.pathname]);
+
+  // Close when clicking / tapping outside nav
+  useEffect(() => {
+    const handleOutside = (e) => {
+      if (!navRef.current) return;
+      if (!navRef.current.contains(e.target)) {
+        setIsOpen(false);
+        setOpenDropdown(null);
+      }
+    };
+
+    // pointerdown is more reliable for touch + click
+    document.addEventListener("pointerdown", handleOutside);
+    return () => document.removeEventListener("pointerdown", handleOutside);
+  }, []);
+
+  // Close menu helper (for clicks on links)
+  const closeMenu = () => {
+    setIsOpen(false);
+    setOpenDropdown(null);
+  };
+
   return (
-    <nav className={`navbar ${showNavbar ? "show" : "hide"}`}>
+    <nav
+      className={`navbar ${showNavbar ? "show" : "hide"}`}
+      ref={navRef}
+      role="navigation"
+      aria-label="Main Navigation"
+    >
       <div className="upper-header">
         <div className="uh-left">
-          <a href="">MEHHA</a>
-          <a href="">Mes-Arg Plast</a>
-          <a href="">Tirsit Apartment</a>
+          <a href="/">MEHHA</a>
+          <a href="/mesarg">Mes-Arg Plast</a>
+          <a href="/tirsit">Tirsit Apartment</a>
         </div>
 
         <div className="uh-right">
@@ -56,38 +93,52 @@ export default function Navbar() {
           <a href="https://www.tiktok.com/@mehha.trading">
             <img className='social-icons' src={tiktokIcon} alt="mehha-tiktok-icon" />
           </a>
-          
         </div>
       </div>
 
-      <div className="container">
+      <div className="container" onClick={(e) => e.stopPropagation()}>
         <a href="/">
           <img src={logo} alt="MEHHA Logo" className="logo" />
         </a>
 
-        <div className={`hamburger ${isOpen ? "active" : ""}`} onClick={toggleMenu}>
+        {/* Hamburger — keep it on top via CSS z-index */}
+        <div
+          className={`hamburger ${isOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+          ref={hamburgerRef}
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          role="button"
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/industry">Companies & Shares</Link></li>
+        <ul className={`nav-links ${isOpen ? "open" : ""}`} onClick={(e) => e.stopPropagation()}>
+          <li onClick={closeMenu}><Link to="/">Home</Link></li>
+          <li onClick={closeMenu}><Link to="/industry">Companies & Shares</Link></li>
 
           <li className={`dropdown ${openDropdown === "trades" ? "open" : ""}`}>
-            <span className="dropbtn" onClick={() => toggleDropdown("trades")}>
+            {/* Use a button-like span for mobile tap */}
+            <span
+              className="dropbtn"
+              onClick={(e) => toggleDropdown("trades", e)}
+              role="button"
+              aria-expanded={openDropdown === "trades"}
+            >
               International Trades ▾
             </span>
-            <ul className="dropdown-content">
-              <li><Link to="/exports">Exports</Link></li>
-              <li><Link to="/imports">Imports</Link></li>
+
+            <ul className="dropdown-content" style={{ display: openDropdown === "trades" || window.innerWidth > 768 ? 'flex' : 'none' }}>
+              <li onClick={closeMenu}><Link to="/exports">Exports</Link></li>
+              <li onClick={closeMenu}><Link to="/imports">Imports</Link></li>
             </ul>
           </li>
 
-          <li><Link to="/News">What's New?</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li onClick={closeMenu}><Link to="/News">What's New?</Link></li>
+          <li onClick={closeMenu}><Link to="/about">About</Link></li>
+          <li onClick={closeMenu}><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
     </nav>
