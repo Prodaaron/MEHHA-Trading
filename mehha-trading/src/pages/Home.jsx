@@ -10,6 +10,7 @@ import TextSlider from "../components/TextSlider";
 import SecondSection from "../components/secondSection.jsx";
 import WhyChooseMehha from "../components/WhyChooseMehha.jsx";
 import ProductsSection from "../components/ProductsSection.jsx";
+import ExportInfo from "../components/ExportInfo.jsx";
 
 
 const Home = () => {
@@ -19,7 +20,8 @@ const Home = () => {
       <TextSlider />
       <SecondSection />
       <WhyChooseMehha />
-      <ProductsSection />
+      <ExportInfo />
+      {/* <ProductsSection /> */}
       {/* <ShuffleSection /> */}
       {/* <List /> */}
       {/* <VisionSection />

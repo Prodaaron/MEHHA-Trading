@@ -39,21 +39,35 @@
 }
 
 /* CARD */
+/* CARD */
 .why-card {
   padding: 30px;
   border-radius: 16px;
-  background: white;
-  border: 1px solid #e6e6e6;
+  cursor: pointer;
+
+  /* Matte neutral base */
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f1f2f1 100%);
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.04),
+    0 10px 24px rgba(0,0,0,0.06);
+
   opacity: 0;
   transform: translateY(50px);
-  transition: 
+  transition:
     opacity .7s ease,
     transform .7s ease,
-    background .4s ease,
-    border .1s ease,
-    box-shadow .1s ease;
-  cursor: pointer;  
+    box-shadow .2s ease,
+    background .4s ease;
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
+
+
+
 
 .why-card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
@@ -76,4 +90,68 @@
 .why-card:not(.card-visible) {
   opacity: 0;
   transform: translateY(60px);
+}
+
+/* Gloss reflection */
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+
+  /* soft gloss strip with subtle green blend */
+  background:
+    linear-gradient(
+      130deg,
+      rgba(255,255,255,0.7) 0%,
+      rgba(255,255,255,0.4) 4%,
+      rgba(14,49,7,0.10) 10%,
+      rgba(14,49,7,0.06) 16%,
+      rgba(255,255,255,0) 32%
+    );
+
+  transform: translateY(-8%) rotate(-5deg);
+  mix-blend-mode: screen;
+  opacity: .8;
+}
+
+/* Subtle depth shadow at bottom-left */
+.why-card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 130%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+
+  background: radial-gradient(
+    closest-side,
+    rgba(14,49,7,0.045),
+    transparent 60%
+  );
+}
+
+
+
+.why-card:hover {
+  box-shadow: 0 14px 35px rgba(14,49,7,0.18), 0 0 10px rgba(0,0,0,.05);
+}
+
+
+@media (prefers-reduced-motion: no-preference){
+  .why-card.card-visible::before {
+    animation: surfaceSweep 1.6s ease-out forwards;
+  }
+
+  @keyframes surfaceSweep {
+    0%   { transform: translateX(-30%) translateY(-8%) rotate(-5deg); opacity:.6; }
+    60%  { transform: translateX(20%)  translateY(-8%) rotate(-5deg); opacity:.85; }
+    100% { transform: translateX(60%)  translateY(-8%) rotate(-5deg); opacity:.2; }
+  }
 }
