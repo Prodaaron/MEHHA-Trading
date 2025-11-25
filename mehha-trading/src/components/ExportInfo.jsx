@@ -1,6 +1,9 @@
 // src/components/ExportInfo.jsx
 import React, { useEffect, useRef } from "react";
 import "./ExportInfo.css";
+import oilSeedImg from "../assets/oilseeds-image-bg.jpg";
+import pulsesImg from "../assets/pulses-image-bg.jpg";
+
 
 // placeholder using your uploaded image
 const placeholder = "/mnt/data/Screenshot (3).png";
@@ -9,14 +12,14 @@ const categories = [
   {
     title: "Oilseeds",
     desc: "Ethiopia is known for its rich variety of high-quality oilseeds that serve as major agricultural exports. Our oilseeds are sourced directly from trusted farmers and cooperatives.",
-    examples: ["Sesame Seeds", "Niger Seed", "Soybeans", "Flaxseed", "Castor Seed"],
-    img: placeholder
+    examples: ["Sesame Seed", "Niger Seed", "Soybeans", "Flaxseed", "Castor Seed"],
+    img: oilSeedImg
   },
   {
     title: "Pulses",
     desc: "Handled with care, cleaned, and graded to international standards, Ethiopian pulses are valued worldwide for their quality, size uniformity, and taste.",
     examples: ["Chickpeas", "Red Kidney Beans", "Green Mung Beans", "Lupin", "White Pea Beans"],
-    img: placeholder
+    img: pulsesImg
   }
 ];
 
@@ -80,11 +83,11 @@ export default function ExportInfo() {
 
                 <ul className="export-list">
                   {c.examples.map((item, idx) => (
-                    <li key={idx}>• {item}</li>
+                    <li key={idx}>{item}</li>
                   ))}
                 </ul>
 
-                <a className="export-link">Learn More →</a>
+                <a className="export-link">Learn More <span>→</span></a>
               </div>
             </div>
           ))}

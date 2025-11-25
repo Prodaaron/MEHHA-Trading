@@ -94,27 +94,78 @@
 
 /* List */
 .export-list {
-  list-style: none;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 18px;
+  list-style: none;
 }
+
 .export-list li {
-  font-size: 0.94rem;
-  color: #333;
-  margin-bottom: 4px;
+  background: rgba(11, 49, 7, 0.05); /* slight green reflection */
+  color: #0e3107;
+  padding: 6px 12px;
+  list-style: none;
+  border-radius: 9px;
+  font-size: 0.89rem;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(11, 49, 7, 0.08);
+  backdrop-filter: blur(6px);
+  transition: background .25s ease, transform .25s ease;
+  cursor: pointer;
 }
+
+.export-list li:hover {
+  background: rgba(11, 49, 7, 0.12);
+  transform: translateY(-2px);
+}
+
 
 /* Link */
 .export-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-weight: 600;
-  color: #2d7d0b;
-  cursor: pointer;
+  font-size: .92rem;
+  color: #0e3107;
   text-decoration: none;
-  transition: transform 0.18s ease;
+  padding-bottom: 2px;
+  transition: color .25s ease;
+  cursor: pointer;
 }
+
+.export-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  height: 1.5px;
+  background: currentColor;
+  opacity: .7;
+  transition: width .28s ease;
+}
+
+.export-link span {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform .25s ease;
+}
+
 .export-link:hover {
-  transform: translateX(6px);
+  color: #14581a; /* slightly darker green */
 }
+
+.export-link:hover::after {
+  width: 100%;
+}
+
+.export-link:hover span {
+  transform: translateX(4px);
+}
+
 
 /* Mobile adjustments */
 @media (max-width: 900px) {
