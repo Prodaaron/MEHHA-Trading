@@ -7,6 +7,7 @@ import logo from "../assets/logo.png";
 import instaIcon from '../assets/instagram-svgrepo-com.svg';
 import tiktokIcon from '../assets/tiktok-svgrepo-com.svg';
 import facebook from '../assets/facebook-svgrepo-com.svg';
+import mesargLogo from "../assets/Mes-Arg-Plast-Logo-Primary-transparent.png"; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,10 @@ export default function Navbar() {
   const navRef = useRef(null);
   const hamburgerRef = useRef(null);
   const location = useLocation();
+
+  // determine which logo to show
+  const isMesArg = location.pathname.startsWith("/mes-arg-plast");
+  const logoToShow = isMesArg ? mesargLogo : logo;
 
   const toggleMenu = (e) => {
     e?.stopPropagation();
@@ -97,7 +102,7 @@ export default function Navbar() {
 
       <div className="container" onClick={(e) => e.stopPropagation()}>
         <a href="/">
-          <img src={logo} alt="MEHHA Logo" className="logo" />
+          <img src={logoToShow} alt="MEHHA Logo" className="logo" />
         </a>
 
         {/* Hamburger — keep it on top via CSS z-index */}
