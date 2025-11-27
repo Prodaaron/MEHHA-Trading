@@ -79,8 +79,7 @@ export default function Navbar() {
       <div className="upper-header">
         <div className="uh-left">
           <a href="/">MEHHA</a>
-          <a href="/mesarg">Mes-Arg Plast</a>
-          <a href="/tirsit">Tirsit Apartment</a>
+          <a href="/mes-arg-plast">Mes-Arg Plast</a>
         </div>
 
         <div className="uh-right">
@@ -130,7 +129,7 @@ export default function Navbar() {
               International Trades ▾
             </span>
 
-            <ul className="dropdown-content" style={{ display: openDropdown === "trades" || window.innerWidth > 768 ? 'flex' : 'none' }}>
+            <ul className={`dropdown-content ${openDropdown === "trades" ? "open" : ""}`}>
               <li onClick={closeMenu}><Link to="/exports">Exports</Link></li>
               <li onClick={closeMenu}><Link to="/imports">Imports</Link></li>
             </ul>

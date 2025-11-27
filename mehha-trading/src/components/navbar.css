@@ -43,7 +43,7 @@
 
 /* NAV main container ------------------- */
 .container {
-  width: 100%;
+  width: 90%;
   height: auto;
   padding: 0 1.5rem;       /* Added spacing */
   margin: auto;
@@ -98,11 +98,13 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: calc(100% + 6px); /* sits directly below the navbar row */
+  top: calc(100%); /* sits directly below the navbar row */
   left: 0;
   background-color: #fff;
-  min-width: 200px;
+  min-width: 150px;
   border-radius: 12px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   padding: 10px 0;
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
   z-index: 1000;
@@ -182,6 +184,11 @@
   .container {
     width: 90%;
     padding: 0 1rem; /* nice spacing on sides */
+  }
+
+  .upper-header {
+    align-items: center;
+    justify-content: space-around;
   }
 
   /* full-screen style dropdown nav */
