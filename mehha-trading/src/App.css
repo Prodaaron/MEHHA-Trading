@@ -19,6 +19,23 @@
   --secondary-font: 'Ibarra Real Nova', serif; 
 }
 
+.theme-mesarg {
+  --primary: #0074ff;        /* example: Mes-Arg blue */
+  --alternate3: #001d3d;
+  --bg: #e8efff;
+
+  --dark: linear-gradient(
+    135deg,
+    #0e110d 0%,
+    #111111 25%,
+    #181b18 50%,
+    #1d1d1d 75%,
+    #000000 100%
+  );
+  --light: #FFFFFF;
+  --secondary-font: 'Ibarra Real Nova', serif;
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -1,25 +1,38 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/scrollToTop";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Exports from "./pages/Exports";
 import Imports from "./pages/Imports";
 import FB from './pages/F&B';
-import Education from './pages/Education'
+import Education from './pages/Education';
 import Industries from "./pages/Industries";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contacts";
-import "./App.css";
-import ScrollToTop from "./components/scrollToTop";
 import MesArg from "./pages/mes-arg.jsx";
 import Announcements from "./pages/Announcements.jsx";
 
+import "./App.css";
+
 function App() {
-  
+  const location = useLocation();
+
+  useEffect(() => {
+    // Use exact path you use in Routes
+    if (location.pathname.startsWith("/mes-arg-plast")) {
+      document.body.classList.add("theme-mesarg");
+    } else {
+      document.body.classList.remove("theme-mesarg");
+    }
+  }, [location.pathname]);
 
   return (
-    <Router>
+    <>
       <Navbar />
       <ScrollToTop />
       <Routes>
@@ -36,8 +49,8 @@ function App() {
         <Route path="/News" element={<Announcements />} />
       </Routes>
       <Footer />
-    </Router>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
