@@ -4,9 +4,7 @@
   display: grid;
   place-items: center;
   padding: 2rem;
-  background: radial-gradient(1200px 600px at 80% -10%, var(--secondary) 0%, transparent 60%),
-              radial-gradient(900px 500px at -10% 110%, var(--alternate) 0%, transparent 60%),
-              linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+  background: var(--bg);
 }
 
 .uc-card {
