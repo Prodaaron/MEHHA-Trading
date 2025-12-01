@@ -84,7 +84,7 @@ export default function Navbar() {
       <div className="upper-header">
         <div className="uh-left">
           <a href="/">MEHHA</a>
-          <a href="/mes-arg-plast">Mes-Arg Plast</a>
+          {/* <a href="/mes-arg-plast">Mes-Arg Plast</a> */}
         </div>
 
         <div className="uh-right">
