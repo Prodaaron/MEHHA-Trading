@@ -51,7 +51,7 @@ const Export = () => {
 
         <h2>Oil Seeds</h2>
         
-        <section className="products-grid">
+        <section className="products-grid" id="oilseedsProduct">
           {oilseedProducts.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.image} alt={product.name} />
@@ -63,7 +63,7 @@ const Export = () => {
 
         <h2>Pulses</h2>
 
-        <section className="products-grid">
+        <section className="products-grid" id="pulsesProduct">
           {pulsesProducts.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.image} alt={product.name} />

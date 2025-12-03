@@ -19,7 +19,7 @@ const SecondSection = () => {
             trusted Ethiopian suppliers.
           </p>
 
-          <a className="second-link" href="/listings">
+          <a className="second-link" href="/exports#products">
             View Listings <span className="arrow">→</span>
           </a>
         </div>

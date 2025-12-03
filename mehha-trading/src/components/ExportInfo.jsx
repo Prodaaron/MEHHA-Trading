@@ -13,13 +13,15 @@ const categories = [
     title: "Oilseeds",
     desc: "Ethiopia is known for its rich variety of high-quality oilseeds that serve as major agricultural exports. Our oilseeds are sourced directly from trusted farmers and cooperatives.",
     examples: ["Sesame Seed", "Niger Seed", "Soybeans", "Flaxseed", "Castor Seed"],
-    img: oilSeedImg
+    img: oilSeedImg,
+    link: '/exports#oilseedsProduct'
   },
   {
     title: "Pulses",
     desc: "Handled with care, cleaned, and graded to international standards, Ethiopian pulses are valued worldwide for their quality, size uniformity, and taste.",
     examples: ["Chickpeas", "Red Kidney Beans", "Green Mung Beans", "Lupin", "White Pea Beans"],
-    img: pulsesImg
+    img: pulsesImg,
+    link: '/exports#pulsesProduct'
   }
 ];
 
@@ -87,7 +89,7 @@ export default function ExportInfo() {
                   ))}
                 </ul>
 
-                <a className="export-link">Learn More <span>→</span></a>
+                <a className="export-link" href={c.link}>Learn More <span>→</span></a>
               </div>
             </div>
           ))}
