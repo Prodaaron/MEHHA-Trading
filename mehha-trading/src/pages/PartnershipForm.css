@@ -1,3 +1,6 @@
+/* src/components/PartnershipForm.css */
+
+/* General Form Styles */
 .partner-section {
   padding: 6rem 0;
   background: #f8f8f8;
@@ -82,19 +85,24 @@
   resize: vertical;
 }
 
+/* Upload */
+.upload-field {
+  position: relative;
+}
+
 .upload-field input {
   display: none;
 }
 
 .upload-btn {
-  padding: 0.8rem 1.2rem;
+  display: inline-block;
+  padding: 0.75rem 1rem;
   border-radius: 10px;
-  border: 1.5px dashed #bbb;
   background: #f9f9f9;
   cursor: pointer;
-  font-size: .95rem;
-  transition: .2s;
-  text-align: center;
+  border: 1.5px dashed #bbb;
+  transition: 0.2s ease;
+  color: #333;
 }
 
 .upload-btn:hover {
@@ -103,11 +111,19 @@
 }
 
 .upload-note {
-  font-size: .8rem;
+  font-size: 0.85rem;
   color: #777;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
+/* Error messages */
+.error {
+  color: #ff3333;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Submit button */
 .partner-submit {
   margin-top: 2.5rem;
   width: 100%;
@@ -133,5 +149,16 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-form {
+    padding: 2rem;
   }
 }
