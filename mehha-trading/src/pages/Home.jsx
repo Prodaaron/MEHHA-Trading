@@ -19,8 +19,9 @@ const Home = () => {
       <HeroSection />
       <TextSlider />
       <SecondSection />
-      <WhyChooseMehha />
       <ExportInfo />
+      <WhyChooseMehha />
+      
       {/* <ProductsSection /> */}
       {/* <ShuffleSection /> */}
       {/* <List /> */}
