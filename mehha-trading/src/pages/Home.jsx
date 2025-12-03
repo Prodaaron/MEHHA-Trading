@@ -11,6 +11,7 @@ import SecondSection from "../components/secondSection.jsx";
 import WhyChooseMehha from "../components/WhyChooseMehha.jsx";
 import ProductsSection from "../components/ProductsSection.jsx";
 import ExportInfo from "../components/ExportInfo.jsx";
+import PartnershipForm from "./PartnershipForm.jsx";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <SecondSection />
       <ExportInfo />
       <WhyChooseMehha />
+      <PartnershipForm />
       
       {/* <ProductsSection /> */}
       {/* <ShuffleSection /> */}

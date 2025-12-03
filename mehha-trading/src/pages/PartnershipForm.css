@@ -1,0 +1,137 @@
+.partner-section {
+  padding: 6rem 0;
+  background: #f8f8f8;
+}
+
+.partner-container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+.partner-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.partner-sub {
+  text-align: center;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 3.5rem;
+  font-size: 1.1rem;
+}
+
+.partner-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+  animation: fadeUp 0.4s ease;
+}
+
+.partner-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: .95rem;
+}
+
+.input-box input,
+.input-box textarea,
+.phone-code,
+.phone-wrapper input {
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #ddd;
+  font-size: 1rem;
+  transition: .25s;
+}
+
+.input-box input:focus,
+.phone-wrapper input:focus,
+.input-box textarea:focus,
+.phone-code:focus {
+  border-color: #0c9435;
+  outline: none;
+}
+
+.phone-wrapper {
+  display: flex;
+  gap: .6rem;
+}
+
+.phone-code {
+  width: 100px;
+  cursor: pointer;
+}
+
+.input-box textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.upload-field input {
+  display: none;
+}
+
+.upload-btn {
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  border: 1.5px dashed #bbb;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-size: .95rem;
+  transition: .2s;
+  text-align: center;
+}
+
+.upload-btn:hover {
+  border-color: #0c9435;
+  color: #0c9435;
+}
+
+.upload-note {
+  font-size: .8rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+.partner-submit {
+  margin-top: 2.5rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #0c9435;
+  color: white;
+  font-size: 1.05rem;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+
+.partner-submit:hover {
+  background: #0a7a2d;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
