@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css"; // Import styles for the phone number input
-import { db, storage } from "../services/firebase";
+import "react-phone-number-input/style.css";
+
+import { db } from "../services/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+
 import "./PartnershipForm.css";
 
 const PartnershipForm = () => {
@@ -11,106 +12,85 @@ const PartnershipForm = () => {
     fullName: "",
     organization: "",
     address: "",
+    email: "",
     phoneNumber: "",
     message: "",
   });
 
-  const [fileName, setFileName] = useState("");
-  const [license, setLicense] = useState(null);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
-  
+  const [successMessage, setSuccessMessage] = useState("");
+
+  // -------------------------
+  // VALIDATION
+  // -------------------------
   const validateForm = () => {
-    let isValid = true;
-    const newErrors = {};
+  let newErrors = {};
 
-    // Validate full name
-    if (!form.fullName) {
-      newErrors.fullName = "Full Name is required.";
-      isValid = false;
-    }
+  if (!form.fullName.trim()) {
+    newErrors.fullName = "Full Name is required.";
+  }
+  if (!form.organization.trim()) {
+    newErrors.organization = "Organization name is required.";
+  }
+  if (!form.address.trim()) {
+    newErrors.address = "Address is required.";
+  }
+  if (!form.phoneNumber || form.phoneNumber.trim().length < 5) {
+    newErrors.phoneNumber = "Valid phone number is required.";
+  }
+  if (!form.email || !/^\S+@\S+\.\S+$/.test(form.email)) {
+    newErrors.email = "A valid email is required.";
+  }
 
-    // Validate organization name
-    if (!form.organization) {
-      newErrors.organization = "Organization name is required.";
-      isValid = false;
-    }
+  setErrors(newErrors);
 
-    // Validate address
-    if (!form.address) {
-      newErrors.address = "Address is required.";
-      isValid = false;
-    }
+  // ❗ If errors exist, prevent submission
+  return Object.keys(newErrors).length === 0;
+};
 
-    // Validate phone number
-    if (!form.phoneNumber) {
-      newErrors.phoneNumber = "Phone number is required.";
-      isValid = false;
-    }
 
-    // Validate file upload
-    if (!license) {
-      newErrors.license = "Business license is required.";
-      isValid = false;
-    }
-
-    setErrors(newErrors);
-    return isValid;
-  };
-
+  // -------------------------
+  // INPUT HANDLERS
+  // -------------------------
   const handleChange = (e) => {
-    setForm((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setFileName(file.name);
-      setLicense(file);
-    }
-  };
-
+  // -------------------------
+  // SUBMIT HANDLER
+  // -------------------------
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
     if (!validateForm()) return;
 
     setLoading(true);
+    setErrors({});
+    setSuccessMessage("");
 
     try {
-      // 1. Upload the file to Firebase Storage
-      const fileRef = ref(storage, `licenses/${Date.now()}-${license.name}`);
-      await uploadBytes(fileRef, license);
-      const fileURL = await getDownloadURL(fileRef);
-
-      // 2. Store form data in Firestore
       await addDoc(collection(db, "partnershipRequests"), {
-        fullName: form.fullName,
-        organization: form.organization,
-        address: form.address,
-        phoneNumber: form.phoneNumber,
-        licenseFileURL: fileURL,
-        message: form.message,
-        submittedAt: serverTimestamp(), // Firestore will auto-generate the timestamp
+        ...form,
+        submittedAt: serverTimestamp(),
       });
 
-      alert("Thank you for your partnership request! We will get in touch soon.");
-      // Clear form after submission
+      // Show success message card
+      setSuccessMessage(
+        `🎉 Thank you, ${form.fullName}! Your partnership request has been submitted.`
+      );
+
+      // Reset form
       setForm({
         fullName: "",
         organization: "",
         address: "",
+        email: "",
         phoneNumber: "",
         message: "",
       });
-      setFileName("");
-      setLicense(null); // Reset file state
     } catch (err) {
-      console.error("Error submitting partnership request:", err);
-      alert("Error submitting request. Please try again.");
+      console.error("Submission error:", err);
+      setErrors({ submit: "Error submitting request. Please try again." });
     } finally {
       setLoading(false);
     }
@@ -120,47 +100,63 @@ const PartnershipForm = () => {
     <section className="partner-section">
       <div className="partner-container">
         <h2 className="partner-title">Partner With MEHHA</h2>
+        <p className="partner-subtitle">For importers, wholesalers, and global representatives who want consistent
+        and high-quality access to <br /> Ethiopian oilseeds and pulses.</p>
         <form className="partner-form" onSubmit={handleSubmit}>
           <div className="partner-grid">
+            {/* Full Name */}
             <div className="input-box">
               <label>Full Name</label>
               <input
                 type="text"
                 name="fullName"
                 placeholder="John Doe"
-                required
                 value={form.fullName}
                 onChange={handleChange}
               />
               {errors.fullName && <div className="error">{errors.fullName}</div>}
             </div>
 
+            {/* Organization */}
             <div className="input-box">
               <label>Organization / Company</label>
               <input
                 type="text"
                 name="organization"
                 placeholder="Company Ltd."
-                required
                 value={form.organization}
                 onChange={handleChange}
               />
               {errors.organization && <div className="error">{errors.organization}</div>}
             </div>
 
+            {/* Address */}
             <div className="input-box">
               <label>Address</label>
               <input
                 type="text"
                 name="address"
                 placeholder="City, Country"
-                required
                 value={form.address}
                 onChange={handleChange}
               />
               {errors.address && <div className="error">{errors.address}</div>}
             </div>
 
+            {/* Email */}
+            <div className="input-box">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                value={form.email}
+                onChange={handleChange}
+              />
+              {errors.email && <div className="error">{errors.email}</div>}
+            </div>
+
+            {/* Phone Number */}
             <div className="input-box">
               <label>Phone Number</label>
               <PhoneInput
@@ -168,31 +164,11 @@ const PartnershipForm = () => {
                 defaultCountry="US"
                 value={form.phoneNumber}
                 onChange={(value) => setForm({ ...form, phoneNumber: value })}
-                className="phone-input"
-                required
               />
               {errors.phoneNumber && <div className="error">{errors.phoneNumber}</div>}
             </div>
 
-            <div className="input-box">
-              <label>Upload Business License</label>
-              <div className="upload-field">
-                <input
-                  type="file"
-                  accept=".pdf,.doc,.docx"
-                  onChange={handleFileChange}
-                  required
-                />
-                <label className="upload-btn">
-                  {fileName ? fileName : "Select a file"}
-                </label>
-              </div>
-              {errors.license && <div className="error">{errors.license}</div>}
-              <p className="upload-note">
-                Accepted formats: PDF, DOC, DOCX
-              </p>
-            </div>
-
+            {/* Message */}
             <div className="input-box wide">
               <label>Message (Optional)</label>
               <textarea
@@ -204,10 +180,27 @@ const PartnershipForm = () => {
             </div>
           </div>
 
+          {errors.submit && <div className="error submit-error">{errors.submit}</div>}
+
           <button type="submit" className="partner-submit" disabled={loading}>
             {loading ? "Submitting..." : "Submit Partnership Request"}
           </button>
         </form>
+
+        {/* Success popup */}
+        {successMessage && (
+          <div className="success-popup">
+            <div className="success-card">
+              <p>{successMessage}</p>
+              <button
+                className="close-btn"
+                onClick={() => setSuccessMessage("")}
+              >
+                ✖
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ const Home = () => {
       <SecondSection />
       <ExportInfo />
       <WhyChooseMehha />
-      {/* <PartnershipForm /> */}
+      <PartnershipForm />
       
       {/* <ProductsSection /> */}
       {/* <ShuffleSection /> */}
