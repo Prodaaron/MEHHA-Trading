@@ -36,7 +36,6 @@ const Industries = () => {
   return (
     <div className="industry">
       <h1>Our Companies & Shares</h1>
-      <hr />
 
       <p className="Industry-label">Industry</p>
       {/* Categories filter */}

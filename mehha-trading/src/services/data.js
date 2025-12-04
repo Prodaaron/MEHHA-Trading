@@ -21,7 +21,7 @@ export const companies = [
         //          mm-dd-yy
         id: 'comp-2-08-17-25',
         name: 'Tirsit Apartment',
-        logo: './tirsit-apartment-white.png',
+        logo: './tirsit-apartment.png',
         category: 'Real estate',
         description: '',
         link: ''
