@@ -1,16 +1,21 @@
 .exphero {
   /* height: 80vh; */
-  background-size: contain;
-  background-position: start;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: start;
   padding: 1.5rem 0;
+  background-position: start;
+  background-color: var(--bg);
+  padding: 0 50px;
+}
+
+.exphero img {
+  width: 50%;
 }
 
 .exphero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
   padding: 1rem 2rem;
   text-align: start;
   color: white;
@@ -27,6 +32,7 @@
 
 .exphero h1 {
   font-family: var(--primary-font);
+  color: var(--secondary);
   font-size: 2.5rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -36,8 +42,7 @@
   font-family: var(--secondary-font);
   font-size: 1.25rem;
   margin-top: 0;
-  color: var(--primary);
-  filter: drop-shadow(0 0 10px var(--primary));
+  color: grey;
   margin-bottom: 1.5rem;
 }
 
@@ -59,7 +64,9 @@
 
 @media screen and (max-width: 768px) {
   .exphero {
+    flex-direction: column;
     justify-content: center;
+    padding: 20px 0;
   }
   
   .exphero-overlay {
