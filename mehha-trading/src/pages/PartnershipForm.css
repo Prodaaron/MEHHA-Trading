@@ -3,7 +3,7 @@
 /* General Form Styles */
 .partner-section {
   padding: 6rem 0;
-  background: #f8f8f8;
+  background: var(--bg);
 }
 
 .partner-container {

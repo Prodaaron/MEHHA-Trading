@@ -99,7 +99,7 @@ const PartnershipForm = () => {
   return (
     <section className="partner-section">
       <div className="partner-container">
-        <h2 className="partner-title">Partner With MEHHA</h2>
+        <h2 className="partner-title">Become our Partner</h2>
         <p className="partner-subtitle">For importers, wholesalers, and global representatives who want consistent
         and high-quality access to <br /> Ethiopian oilseeds and pulses.</p>
         <form className="partner-form" onSubmit={handleSubmit}>
