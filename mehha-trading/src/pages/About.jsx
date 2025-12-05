@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './about.css';
+import VisionSection from '../components/VisionSection';
+import MissionSection from '../components/MissionSection';
 
 // Animation variants
 const fadeInUp = {
@@ -17,14 +19,17 @@ const About = () => {
   return (
     <div className='about'>
       {/* Page Title */}
-      <motion.h1
+      
+      <motion
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        About Us
-      </motion.h1>
+        <VisionSection />
+        <MissionSection />
+      </motion>
+      
 
       {/* Founder Section */}
       <motion.div
