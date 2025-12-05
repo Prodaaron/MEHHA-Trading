@@ -118,7 +118,7 @@
   width: 100%;
   padding: 1rem;
   border-radius: 12px;
-  background: var(--primary);
+  background: #0c9435;
   color: white;
   font-size: 1.05rem;
   cursor: pointer;
@@ -127,7 +127,7 @@
 }
 
 .partner-submit:hover {
-  background: var(--alternate2);
+  background: var(--alternate3);
 }
 
 /* Success popup */
