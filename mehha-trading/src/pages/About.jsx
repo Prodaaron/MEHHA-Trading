@@ -53,22 +53,15 @@ const About = () => {
           <motion.h2 variants={fadeIn}>The Founder</motion.h2>
 
           <motion.p variants={fadeIn}>
-            Mesfin Argaw, born on June 19, 1978 in Addis Ababa, is an entrepreneur
-            with over 30 years of experience. Starting from a humble retail shop
-            owned by his father, he transformed challenges into growth—leading the
-            business from debt to stability and expansion.
+            Mesfin Argaw, born on June 19, 1978, in Addis Ababa, Ethiopia, is a seasoned entrepreneur with over 30 years of experience in the business sector. His entrepreneurial journey began at a young age, managing his father Argaw Demeke’s retail business. Through his leadership, he successfully guided the family business out of debt and strengthened its operations, laying the foundation for future ventures.
           </motion.p>
 
           <motion.p variants={fadeIn}>
-            His leadership journey evolved from retail to wholesale, and later into
-            manufacturing with *Mes-Arg Plastic Shoe & Raw Materials*, before
-            eventually founding MEHHA Trading PLC in 2017.
+            Building on his early successes in retail, Mesfin expanded into the wholesale sector and, after years of experience as a distributor, established his own factory, Mes-Arg Plastic Shoe & Raw Materials.
           </motion.p>
 
           <motion.p variants={fadeIn}>
-            The name MEHHA represents family unity—each letter symbolizing the
-            initials of his siblings. This philosophy continues to guide the company
-            culture today.
+            In 2017, alongside his supportive wife Tirsit Getachew, Mesfin founded MEHHA Trading PLC. The name MEHHA reflects his core values: Family, Unity, and Growth. Each letter represents the initials of his siblings, symbolizing the importance of family in both his personal and professional life. Under his vision, MEHHA Trading PLC continues to grow, fostering a culture of collaboration, innovation, and excellence.
           </motion.p>
         </motion.div>
 
