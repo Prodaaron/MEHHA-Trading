@@ -136,7 +136,7 @@ const PartnershipForm = () => {
               <input
                 type="text"
                 name="address"
-                placeholder="City, Country"
+                placeholder="123 Street, City, Province, Country"
                 value={form.address}
                 onChange={handleChange}
               />
