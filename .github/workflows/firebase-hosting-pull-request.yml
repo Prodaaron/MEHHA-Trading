@@ -19,7 +19,7 @@ jobs:
           node-version: '20'   # use same Node version you use locally
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
