@@ -1,5 +1,5 @@
 import React from "react";
-import "./textSlider.css";
+import "./TextSlider.css";
 
 export default function TextSlider() {
   const items = [
