@@ -6,7 +6,7 @@ import HeroSection from "../components/Hero.jsx"; // capitalized component
 // import MissionSection from "../components/MissionSection.jsx";
 // import ShuffleSection from "../components/ShuffleSection.jsx";
 // import ListingSec from '../components/listing-sec.jsx';
-import TextSlider from "../components/TextSlider.jsx";
+import TextSlider from "../components/textSlider.jsx";
 import SecondSection from "../components/secondSection.jsx";
 import WhyChooseMehha from "../components/WhyChooseMehha.jsx";
 // import ProductsSection from "../components/ProductsSection.jsx";
