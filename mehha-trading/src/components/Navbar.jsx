@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../App.css";
 import "./navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import instaIcon from '../assets/instagram-svgrepo-com.svg';
 import tiktokIcon from '../assets/tiktok-svgrepo-com.svg';
 import facebook from '../assets/facebook-svgrepo-com.svg';
