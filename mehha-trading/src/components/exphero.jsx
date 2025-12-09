@@ -1,7 +1,7 @@
 import React from "react";
 import "./expHero.css";
 import heroBg from "../assets/hero-image-2025-26-enterance-export-page.png"; // Replace with your actual background image
-import logo from "../assets/logo.png"; // Your MEHHA logo
+import logo from "../assets/Logo.png"; // Your MEHHA logo
 
 const expHero = () => {
   return (
