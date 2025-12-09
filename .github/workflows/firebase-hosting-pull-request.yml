@@ -11,7 +11,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./mehha-trading   # <--- IMPORTANT
+        working-directory: ./mehha-trading
 
     steps:
       - uses: actions/checkout@v4
@@ -34,3 +34,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MEHHA_DB }}
           channelId: live
           projectId: mehha-db
+          entryPoint: mehha-trading
