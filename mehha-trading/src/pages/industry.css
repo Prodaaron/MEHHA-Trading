@@ -103,6 +103,7 @@ input[type="checkbox"]:checked::after {
   background: var(--light);
   color: var(--dark);
   border-radius: 12px;
+  width: 30%;
   padding: 1.5rem;
   text-align: left;
   box-shadow: 0 0px 10px #00000028;
@@ -121,4 +122,21 @@ input[type="checkbox"]:checked::after {
 
 .company-card p {
   font-size: 0.95rem;
+}
+
+@media screen and (max-width: 768px) {
+  .company-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-card {
+    width: 70%;
+    max-width: 400px;
+  }
+
+  .list-logo {
+    width: 70%;
+    object-fit: contain;
+  }
 }

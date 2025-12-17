@@ -36,6 +36,30 @@
     object-fit: cover;
 }
 
+.on-listing {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #f1f2f1;
+    box-shadow: 0 0 10px #00000028;
+}
+
+.on-listing a button {
+    margin-top: 1rem;
+    background-color: #A5FF3E;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.on-listing a button:hover {
+    background-color: #fff;
+    border: solid 1px #A5FF3E;
+}
+
 @media screen and (max-width: 768px) {
     .newsArticle {
         flex-direction: column;
