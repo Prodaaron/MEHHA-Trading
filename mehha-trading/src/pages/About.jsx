@@ -5,6 +5,7 @@ import founderImg from '../assets/the-founder-img-25v.jpg';
 import VisionSection from '../components/VisionSection';
 import MissionSection from '../components/MissionSection';
 import AboutMehhaImg from '../assets/ta-img-25v.jpg'
+import OurOffice from "../components/ourOffice";
 
 // Reusable animations
 const fadeIn = {
@@ -126,6 +127,7 @@ const About = () => {
         
         <VisionSection />
         <MissionSection />
+        <OurOffice />
     </div>
   );
 };
