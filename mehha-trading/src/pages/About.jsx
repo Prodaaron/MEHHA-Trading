@@ -127,7 +127,15 @@ const About = () => {
         
         <VisionSection />
         <MissionSection />
-        <OurOffice />
+        <motion.div 
+        className="our-office"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7 }}
+        >
+          <OurOffice />
+        </motion.div>
+        
     </div>
   );
 };

@@ -1,0 +1,103 @@
+/* ===== OUR OFFICE SECTION ===== */
+
+.oo-sec {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.oo-h2 {
+  font-weight: 700;
+  color: var(--alternate3);
+  letter-spacing: -0.5px;
+}
+
+.oo-left p {
+  margin: 0;
+}
+
+.oo-left strong {
+  color: var(--alternate3);
+}
+
+.oo-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.oo-right {
+  width: 100%;
+  height: 100%;
+}
+
+/* Map iframe safety */
+.oo-right iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 1024px) {
+  .oo-sec {
+    padding: 50px 20px;
+  }
+
+  .oo-h2 {
+    font-size: 28px;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .oo-sec {
+    display: flex !important;
+    padding: 40px 16px !important;
+    text-align: center !important;
+    align-items: center !important ;
+  }
+
+  .oo-description {
+    margin-bottom: 20px !important;
+  }
+
+  /* Stack layout */
+  .oo-sec div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .oo-h2 {
+    font-size: 24px;
+  }
+
+  .oo-left {
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
+
+  .oo-right {
+    height: 300px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+
+@media (max-width: 480px) {
+
+  .oo-sec {
+    padding: 30px 14px;
+  }
+
+  .oo-h2 {
+    font-size: 22px;
+  }
+
+  .oo-right {
+    height: 250px;
+  }
+}
