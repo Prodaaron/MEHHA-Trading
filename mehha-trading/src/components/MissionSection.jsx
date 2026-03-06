@@ -35,29 +35,29 @@ const MissionSection = () => {
         </motion.p>
 
         <motion.ul variants={fadeIn} className="mission-list">
-          <li>
+          <div>
             <img src={pro} alt="mission icon" />
             <span>
               Provide high-quality agricultural and industrial products to
               international and local markets.
             </span>
-          </li>
+          </div>
 
-          <li>
+          <div>
             <img src={prod} alt="mission icon" />
             <span>
               Leverage our diverse business expertise to create meaningful value
               for customers.
             </span>
-          </li>
+          </div>
 
-          <li>
+          <div>
             <img src={dev} alt="mission icon" />
             <span>
               Promote sustainable development and contribute to Ethiopia’s
               growing economy.
             </span>
-          </li>
+          </div>
         </motion.ul>
       </motion.div>
 

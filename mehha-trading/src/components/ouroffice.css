@@ -1,103 +1,86 @@
-/* ===== OUR OFFICE SECTION ===== */
-
 .oo-sec {
-  width: 100%;
-  box-sizing: border-box;
+  padding: 60px 20px;
+  background: #f9fafb;
+}
+
+.oo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* LEFT CONTENT */
+
+.oo-left {
+  text-align: center;
 }
 
 .oo-h2 {
-  font-weight: 700;
-  color: var(--alternate3);
-  letter-spacing: -0.5px;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111;
 }
 
-.oo-left p {
-  margin: 0;
+.oo-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
 }
 
-.oo-left strong {
-  color: var(--alternate3);
-}
-
-.oo-left {
+.oo-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 10px;
 }
 
-.oo-right {
-  width: 100%;
-  height: 100%;
+.oo-details p {
+  font-size: 14px;
+  color: #333;
 }
 
-/* Map iframe safety */
+/* MAP */
+
 .oo-right iframe {
   width: 100%;
-  height: 100%;
-  border-radius: 12px;
+  height: 320px;
+  border: none;
+  border-radius: 8px;
 }
 
-/* ===== TABLET ===== */
+/* DESKTOP */
 
-@media (max-width: 1024px) {
-  .oo-sec {
-    padding: 50px 20px;
-  }
-
-  .oo-h2 {
-    font-size: 28px;
-  }
-}
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 768px) {
-
-  .oo-sec {
-    display: flex !important;
-    padding: 40px 16px !important;
-    text-align: center !important;
-    align-items: center !important ;
-  }
-
-  .oo-description {
-    margin-bottom: 20px !important;
-  }
-
-  /* Stack layout */
-  .oo-sec div[style*="grid"] {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
-  }
-
-  .oo-h2 {
-    font-size: 24px;
+@media (min-width: 768px) {
+  .oo-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
   }
 
   .oo-left {
-    text-align: center;
-    margin-bottom: 30px;
-
+    text-align: left;
+    flex: 1;
   }
 
   .oo-right {
-    height: 300px;
+    flex: 1.2;
   }
-}
 
-/* ===== SMALL MOBILE ===== */
-
-@media (max-width: 480px) {
-
-  .oo-sec {
-    padding: 30px 14px;
+  .oo-right iframe {
+    height: 440px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   }
 
   .oo-h2 {
-    font-size: 22px;
+    font-size: 34px;
   }
 
-  .oo-right {
-    height: 250px;
+  .oo-description {
+    max-width: 520px;
   }
 }

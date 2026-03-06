@@ -60,9 +60,8 @@
 
 /* Each card is an LI (if using ul > li) OR a direct div child.
    This targets both common structures: .msec-content-container > div and .msec-content-container li */
-.msec-content-container > div,
-.msec-content-container > li {
-  list-style: none;
+.msec-content-container div {
+  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -83,10 +82,11 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   padding: 0;
   margin: 0;
+  list-style: none !important;
 }
 
 /* Icon row layout inside li */
-.mission-list li {
+.mission-list div {
   display: flex;
   gap: 14px;
   align-items: flex-start;
@@ -95,11 +95,11 @@
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
-  list-style: none;
+  list-style: none !important;
 }
 
 /* Icon sizing */
-.mission-list li img,
+.mission-list div img,
 .msec-content-container > div img {
   width: 52px;
   height: 52px;
@@ -108,7 +108,7 @@
 }
 
 /* Text inside the mission item */
-.mission-list li span,
+.mission-list div span,
 .msec-content-container > div p {
   font-size: 1rem;
   color: #333;
@@ -118,7 +118,7 @@
 
 /* Hover effect for cards */
 .msec-content-container > div:hover,
-.mission-list li:hover {
+.mission-list div:hover {
   transform: translateY(-8px);
   box-shadow: 0 14px 36px rgba(0,0,0,0.12);
   border-color: rgba(0,0,0,0.06);
@@ -152,16 +152,16 @@
   }
 
   .msec-content-container > div,
-  .mission-list li {
+  .mission-list div {
     align-items: center;
     text-align: center;
   }
 
-  .mission-list li img {
+  .mission-list div img {
     margin-bottom: 6px;
   }
 
-  .mission-list li span {
+  .mission-list div span {
     display: block;
   }
 }
