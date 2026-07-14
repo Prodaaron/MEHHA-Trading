@@ -8,11 +8,9 @@ const Hero = () => {
       <div className="hero-left">
         <div className="hero-left-content">
           <span className="hero-eyebrow">Since 2017 · Addis Ababa, Ethiopia</span>
-          <h1>Trusted on Both Sides of the Trade.</h1>
+          <h1>Unity in Every Step.</h1>
           <p>
-            MEHHA Trading PLC imports chemical raw materials — PVC resin and
-            DOP — for Ethiopian manufacturers, and is building new export
-            routes for Ethiopian agriculture.
+            Let's Make a Difference. Together.
           </p>
           <div className="hero-btn-group">
             <a href="/imports">
