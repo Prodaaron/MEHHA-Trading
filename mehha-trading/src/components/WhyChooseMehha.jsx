@@ -6,20 +6,20 @@ const WhyChooseMehha = () => {
 
   const values = [
     {
-      title: "Unity Across the Supply Chain",
-      desc: "We work closely with farmers, cooperatives and processors to maintain a consistent and reliable supply of premium oilseeds and pulses."
+      title: "Established Since 2017",
+      desc: "Nearly a decade importing chemical raw materials — PVC resin and DOP — for Ethiopian manufacturers, with a track record customers can rely on."
     },
     {
       title: "Integrity & Transparency",
-      desc: "We provide accurate documentation, fair pricing and honest communication — no shortcuts, no surprises."
+      desc: "Accurate documentation, fair pricing and honest communication with every supplier and customer — no shortcuts, no surprises."
     },
     {
-      title: "Quality Assurance",
-      desc: "Every shipment goes through standardized cleaning, grading, and moisture control to meet international export requirements."
+      title: "Trusted Global Suppliers",
+      desc: "We work directly with certified manufacturers in China and South Korea to keep our import supply consistent and quality-checked."
     },
     {
-      title: "Reliable Delivery",
-      desc: "From sourcing to logistics, we ensure every order arrives on time and matches the expected quality."
+      title: "Growing Beyond Imports",
+      desc: "Building on our import foundation, we're now developing export channels for Ethiopian oilseeds and pulses to international markets."
     }
   ];
 
@@ -50,7 +50,7 @@ const WhyChooseMehha = () => {
 
         <h2 className="why-title">Why Choose MEHHA?</h2>
         <p className="why-sub">
-          Exporting premium Ethiopian oilseeds & pulses with unity, integrity and international standards.
+          An established import partner for Ethiopian industry, now growing into agricultural exports.
         </p>
 
         <div className="why-grid">

@@ -1,28 +1,25 @@
-// src/components/ExportInfo.jsx
+// src/components/ImportInfo.jsx
 import React, { useEffect, useRef } from "react";
-import "./ExportInfo.css";
-import oilSeedImg from "../assets/oilseeds-image-bg.jpg";
-import pulsesImg from "../assets/pulses-image-bg.jpg";
-
+import "./ImportInfo.css";
+import pvcResinImg from "../assets/mes-arg/hygain-pvc-resin.jpg";
+import dopImg from "../assets/mes-arg/ac-dop.jpg";
 
 const categories = [
   {
-    title: "Oilseeds",
-    desc: "Ethiopia is known for its rich variety of high-quality oilseeds. As we build out our export division, we're sourcing directly from trusted farmers and cooperatives.",
-    examples: ["Sesame Seed", "Niger Seed", "Soybeans", "Flaxseed", "Castor Seed"],
-    img: oilSeedImg,
-    link: '/exports#oilseedsProduct'
+    title: "PVC Resin",
+    desc: "Bulk polyvinyl chloride resin sourced from established manufacturers in China, supplied in standard 25kg bags for Ethiopia's plastics and manufacturing industries.",
+    examples: ["Grade SG-5", "Grade H5-1000R", "Erdos", "HyGain"],
+    img: pvcResinImg,
   },
   {
-    title: "Pulses",
-    desc: "Cleaned and graded to international standards, Ethiopian pulses are valued worldwide for their quality, size uniformity, and taste.",
-    examples: ["Chickpeas", "Red Kidney Beans", "Green Mung Beans", "Lupin", "White Pea Beans"],
-    img: pulsesImg,
-    link: '/exports#pulsesProduct'
-  }
+    title: "DOP (Plasticizer)",
+    desc: "Dioctyl phthalate imported from certified petrochemical producers in South Korea, supplied in 200kg drums for PVC processing and plastics manufacturing.",
+    examples: ["Aekyung Petrochemical", "200kg Drums", "Made in Korea"],
+    img: dopImg,
+  },
 ];
 
-export default function ExportInfo() {
+export default function ImportInfo() {
   const sectionRef = useRef(null);
   const cardRefs = useRef([]);
 
@@ -58,39 +55,42 @@ export default function ExportInfo() {
   }, []);
 
   return (
-    <section className="export-info" ref={sectionRef}>
-      <div className="export-container">
-        <h2 className="export-title">Building Our Export Division</h2>
-        <p className="export-sub">
-          Alongside our established import business, MEHHA is developing new export routes for premium Ethiopian agricultural products.
+    <section className="import-info" ref={sectionRef}>
+      <div className="import-container">
+        <h2 className="import-title">What We Import</h2>
+        <p className="import-sub">
+          MEHHA's core business: sourcing chemical raw materials from trusted
+          international manufacturers for Ethiopian industry.
         </p>
 
-        <div className="export-grid">
+        <div className="import-grid">
           {categories.map((c, i) => (
             <div
-              className="export-card"
+              className="import-card"
               key={c.title}
               ref={el => (cardRefs.current[i] = el)}
             >
-              <div className="export-img">
+              <div className="import-img">
                 <img src={c.img} alt={c.title} />
               </div>
 
-              <div className="export-body">
+              <div className="import-body">
                 <h3>{c.title}</h3>
-                <p className="export-desc">{c.desc}</p>
+                <p className="import-desc">{c.desc}</p>
 
-                <ul className="export-list">
+                <ul className="import-list">
                   {c.examples.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
                 </ul>
-
-                <a className="export-link" href={c.link}>Learn More <span>→</span></a>
               </div>
             </div>
           ))}
         </div>
+
+        <a className="import-cta" href="/imports">
+          Explore Our Import Catalog <span>→</span>
+        </a>
       </div>
     </section>
   );

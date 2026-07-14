@@ -1,0 +1,75 @@
+.importhero {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--bg);
+  padding: 40px 50px;
+  gap: 30px;
+}
+
+.importhero-img {
+  width: 42%;
+  max-width: 420px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: #fafafa;
+  padding: 20px;
+}
+
+.importhero-overlay {
+  padding: 1rem 2rem;
+  text-align: start;
+  border-radius: 10px;
+  width: 58%;
+}
+
+.importhero-eyebrow {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--alternate3);
+  background: rgba(165, 255, 62, 0.15);
+  border: 1px solid rgba(14, 49, 7, 0.15);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.importhero h1 {
+  font-family: var(--primary-font);
+  color: var(--secondary);
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.importhero p {
+  font-family: var(--secondary-font);
+  font-size: 1.15rem;
+  margin-top: 0;
+  color: grey;
+  margin-bottom: 1.5rem;
+  max-width: 560px;
+}
+
+@media screen and (max-width: 768px) {
+  .importhero {
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 20px;
+  }
+
+  .importhero-overlay {
+    width: 100%;
+    text-align: center;
+  }
+
+  .importhero-img {
+    width: 80%;
+    max-width: 300px;
+  }
+}

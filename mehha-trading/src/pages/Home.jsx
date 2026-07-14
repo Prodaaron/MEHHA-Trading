@@ -1,18 +1,12 @@
 import React from "react";
 import "./home.css";
-import HeroSection from "../components/Hero.jsx"; // capitalized component
-// import List from '../components/list.jsx';
-// import VisionSection from '../components/VisionSection.jsx'
-// import MissionSection from "../components/MissionSection.jsx";
-// import ShuffleSection from "../components/ShuffleSection.jsx";
-// import ListingSec from '../components/listing-sec.jsx';
+import HeroSection from "../components/Hero.jsx";
 import TextSlider from "../components/textSlider.jsx";
 import SecondSection from "../components/secondSection.jsx";
+import ImportInfo from "../components/ImportInfo.jsx";
 import WhyChooseMehha from "../components/WhyChooseMehha.jsx";
-// import ProductsSection from "../components/ProductsSection.jsx";
 import ExportInfo from "../components/ExportInfo.jsx";
 import PartnershipForm from "../components/PartnershipForm.jsx";
-
 
 const Home = () => {
   return (
@@ -20,15 +14,10 @@ const Home = () => {
       <HeroSection />
       <TextSlider />
       <SecondSection />
-      <ExportInfo />
+      <ImportInfo />
       <WhyChooseMehha />
+      <ExportInfo />
       <PartnershipForm />
-      
-      {/* <ProductsSection /> */}
-      {/* <ShuffleSection /> */}
-      {/* <List /> */}
-      {/* <VisionSection />
-      <MissionSection /> */}
     </div>
   );
 };
