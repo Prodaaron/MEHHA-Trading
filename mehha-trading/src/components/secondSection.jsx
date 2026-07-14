@@ -1,26 +1,27 @@
 import React from "react";
 import "./SecondSection.css";
-import productImg from "../assets/sesame-seed-img.png"; // update path as needed
+import productImg from "../assets/mes-arg/erdos-pvc-resin.jpg";
 
 const SecondSection = () => {
   return (
     <section className="second-section">
       <div className="second-container">
-        
+
         <div className="second-image">
-          <img src={productImg} alt="Export Products" />
+          <img src={productImg} alt="Imported PVC Resin" />
         </div>
 
         <div className="second-content">
-          <h2>Our Listings Are Live</h2>
+          <h2>Our Import Business Is Established</h2>
           <p>
-            Explore our export-ready agricultural products including premium
-            sesame seeds, soybean, and niger seeds — sourced directly from
-            trusted Ethiopian suppliers.
+            Since 2017, MEHHA Trading PLC has imported PVC resin, DOP
+            (plasticizer), and other chemical raw materials from trusted
+            manufacturers in China and South Korea — supplying Ethiopian
+            factories that depend on a consistent, reliable source.
           </p>
 
-          <a className="second-link" href="/exports#products">
-            View Listings <span className="arrow">→</span>
+          <a className="second-link" href="/imports">
+            View Import Products <span className="arrow">→</span>
           </a>
         </div>
 

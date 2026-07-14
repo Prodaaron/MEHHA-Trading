@@ -15,6 +15,27 @@
   text-align: left;
   border-radius: 10px;
   width: 50%;
+  padding: 0 3rem;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--alternate3);
+  background: rgba(165, 255, 62, 0.15);
+  border: 1px solid rgba(14, 49, 7, 0.15);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.hero-btn-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .hero-right {
@@ -62,6 +83,17 @@
   color: var(--light);
 }
 
+.hero-btn-outline {
+  background-color: transparent;
+  color: var(--alternate3);
+  border: 2px solid var(--alternate3);
+}
+
+.hero-btn-outline:hover {
+  background-color: var(--alternate3);
+  color: var(--light);
+}
+
 @media screen and (max-width: 768px) {
   .hero-overlay {
     width: 80%;
@@ -80,6 +112,7 @@
 
   .hero-left {
     width: 100%;
+    padding: 0 1.5rem;
   }
 
   .hero-left-content {
@@ -88,6 +121,10 @@
     align-items: center;
     padding: 1rem;
     text-align: center;
+  }
+
+  .hero-btn-group {
+    justify-content: center;
   }
 
   .upper-header {

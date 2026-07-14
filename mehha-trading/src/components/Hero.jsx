@@ -1,31 +1,34 @@
 import React from "react";
 import "./hero.css";
-import heroBg from "../assets/hero-image-2025-26-enterance.png"; // Replace with your actual background image
-import logo from "../assets/Logo.png"; // Your MEHHA logo
+import heroBg from "../assets/hero-image-2025-26-enterance.png";
 
 const Hero = () => {
   return (
-    <section
-      className="hero"
-      
-    >
+    <section className="hero">
       <div className="hero-left">
-        {/* <img src={logo} alt="MEHHA Trading PLC" className="hero-logo" /> */}
         <div className="hero-left-content">
-          <h1>Unity in Every Step.</h1>
-          <p>Working to make companies worldwide part of our family.</p>
-          <a href="/exports">
-            <button className="hero-btn">Learn More</button>
-          </a>
+          <span className="hero-eyebrow">Since 2017 · Addis Ababa, Ethiopia</span>
+          <h1>Trusted on Both Sides of the Trade.</h1>
+          <p>
+            MEHHA Trading PLC imports chemical raw materials — PVC resin and
+            DOP — for Ethiopian manufacturers, and is building new export
+            routes for Ethiopian agriculture.
+          </p>
+          <div className="hero-btn-group">
+            <a href="/imports">
+              <button className="hero-btn">Our Imports</button>
+            </a>
+            <a href="/exports">
+              <button className="hero-btn hero-btn-outline">Our Exports</button>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div 
+      <div
         className="hero-right"
         style={{ backgroundImage: `url(${heroBg})` }}
-        >
-
-      </div>
+      ></div>
     </section>
   );
 };

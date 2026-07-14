@@ -4,11 +4,11 @@ import "./TextSlider.css";
 export default function TextSlider() {
   const items = [
     "MEHHA",
-    "Premium Oilseeds",
-    "High-Quality Pulses",
-    "Global Export Standards",
-    "Ethiopian Origin",
-    "Trusted Supply Chain",
+    "PVC Resin Imports",
+    "DOP & Plasticizers",
+    "Chemical Raw Materials",
+    "Ethiopian Agri-Exports",
+    "Trusted Since 2017",
   ];
 
   return (
