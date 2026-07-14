@@ -1,8 +1,8 @@
 // src/components/ImportInfo.jsx
 import React, { useEffect, useRef } from "react";
 import "./ImportInfo.css";
-import pvcResinImg from "../assets/mes-arg/hygain-pvc-resin.jpg";
-import dopImg from "../assets/mes-arg/ac-dop.jpg";
+import pvcResinImg from "../assets/mes-arg/hygain-pvc-resin.webp";
+import dopImg from "../assets/mes-arg/ac-dop.webp";
 
 const categories = [
   {

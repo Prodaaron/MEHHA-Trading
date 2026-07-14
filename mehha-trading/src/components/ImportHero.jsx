@@ -1,6 +1,6 @@
 import React from "react";
 import "./importHero.css";
-import heroImg from "../assets/mes-arg/erdos-pvc-resin.jpg";
+import heroImg from "../assets/mes-arg/erdos-pvc-resin.webp";
 
 const ImportHero = () => {
   return (
