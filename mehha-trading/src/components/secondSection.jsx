@@ -1,6 +1,6 @@
 import React from "react";
 import "./SecondSection.css";
-import productImg from "../assets/mes-arg/erdos-pvc-resin.jpg";
+import productImg from "../assets/mes-arg/erdos-pvc-resin.webp";
 
 const SecondSection = () => {
   return (
